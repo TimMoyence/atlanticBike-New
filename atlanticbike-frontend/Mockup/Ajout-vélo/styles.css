@@ -269,12 +269,113 @@
   padding-bottom: 0;
 }
 
+.ab-admin-bike-booking-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ab-admin-bike-booking-card {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 22px;
+  background: var(--ab-color-panel);
+  box-shadow: var(--ab-shadow-soft);
+}
+
+.ab-admin-bike-booking-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.ab-admin-bike-booking-card__client,
+.ab-admin-bike-booking-card__price {
+  margin: 0;
+  color: #111111;
+}
+
+.ab-admin-bike-booking-card__client {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.ab-admin-bike-booking-card__price {
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.ab-admin-bike-booking-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.06);
+  color: #111111;
+  font-size: 14px;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+
+.ab-admin-bike-booking-card__meta {
+  display: grid;
+  gap: 6px;
+}
+
+.ab-admin-bike-booking-card__meta span,
+.ab-admin-bike-booking-card__list li {
+  color: rgba(17, 17, 17, 0.74);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ab-admin-bike-booking-card__list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ab-admin-bike-booking-card__list li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.ab-admin-bike-booking-card__list li::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ab-color-accent);
+}
+
+.ab-admin-bike-reservations-teaser__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
 @media (max-width: 1180px) {
   .ab-admin-bike-layout,
   .ab-admin-bike-form-grid--two,
   .ab-admin-bike-form-grid--three,
   .ab-admin-bike-section-heading--split {
     grid-template-columns: 1fr;
+  }
+
+  .ab-admin-bike-booking-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -310,5 +411,18 @@
   .ab-admin-bike-card {
     padding: 18px;
     border-radius: 18px;
+  }
+
+  .ab-admin-bike-booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-admin-bike-booking-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .ab-admin-bike-booking-card__price {
+    font-size: 24px;
   }
 }
