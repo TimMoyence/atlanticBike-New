@@ -298,6 +298,119 @@
   color: rgba(120, 120, 120, 0.52);
 }
 
+.ab-admin-page-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 0;
+}
+
+.ab-admin-page-list--centered {
+  justify-content: center;
+}
+
+.ab-admin-page-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--ab-radius-pill);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 18px rgba(17, 17, 17, 0.03);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #111111;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ab-admin-page-pill:hover,
+.ab-admin-page-pill:focus-visible {
+  border-color: rgba(147, 199, 125, 0.78);
+  background: #ffffff;
+  box-shadow: var(--ab-shadow-soft);
+  transform: translateY(-1px);
+}
+
+.ab-admin-page-pill:focus-visible {
+  outline: none;
+}
+
+.ab-admin-page-pill--active,
+.ab-admin-page-pill[aria-current='page'] {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+  box-shadow: none;
+}
+
+.ab-admin-page-pill--active:hover,
+.ab-admin-page-pill--active:focus-visible,
+.ab-admin-page-pill[aria-current='page']:hover,
+.ab-admin-page-pill[aria-current='page']:focus-visible {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+  box-shadow: none;
+}
+
+.ab-admin-panel,
+.ab-admin-slot-card,
+.ab-admin-bike-card,
+.ab-admin-bike-booking-card,
+.ab-admin-rental-kpi-card,
+.ab-admin-rental-panel,
+.ab-admin-rental-booking-card,
+.ab-admin-rental-lane,
+.ab-admin-repair-panel,
+.ab-admin-repair-form-block,
+.ab-admin-repair-flow-card {
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background-color 0.22s ease;
+}
+
+.ab-admin-panel:focus-within,
+.ab-admin-bike-card:focus-within,
+.ab-admin-rental-panel:focus-within,
+.ab-admin-repair-panel:focus-within,
+.ab-admin-repair-form-block:focus-within {
+  border-color: rgba(147, 199, 125, 0.8);
+  box-shadow: 0 0 0 3px rgba(147, 199, 125, 0.12);
+}
+
+@media (hover: hover) {
+  .ab-admin-slot-card:hover,
+  .ab-admin-bike-card:hover,
+  .ab-admin-bike-booking-card:hover,
+  .ab-admin-rental-kpi-card:hover,
+  .ab-admin-rental-booking-card:hover,
+  .ab-admin-rental-lane:hover,
+  .ab-admin-repair-flow-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(147, 199, 125, 0.55);
+    box-shadow: 0 18px 30px rgba(39, 65, 29, 0.08);
+  }
+
+  .ab-admin-panel:hover,
+  .ab-admin-rental-panel:hover,
+  .ab-admin-repair-panel:hover,
+  .ab-admin-repair-form-block:hover {
+    border-color: rgba(147, 199, 125, 0.48);
+    box-shadow: 0 18px 30px rgba(39, 65, 29, 0.06);
+  }
+}
+
 @media (max-width: 768px) {
   .ab-services-container,
   .ab-fleet-container,

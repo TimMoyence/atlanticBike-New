@@ -122,6 +122,17 @@ function statusClass(status) {
   return `is-${status}`;
 }
 
+function bookingActionLabel(status) {
+  return (
+    {
+      validation: 'Valider',
+      preparation: 'Préparer',
+      encours: 'Suivre',
+      retour: 'Contrôler',
+    }[status] || 'Traiter'
+  );
+}
+
 function renderFleetRows(items) {
   return items
     .map(
@@ -185,7 +196,7 @@ function renderBookingCards(items, targetStatus, title, desc) {
                 </div>
 
                 <div class="ab-admin-rental-booking-card__actions">
-                  <button class="ab-admin-rental-button ab-admin-rental-button--primary" type="button">Traiter</button>
+                  <button class="ab-admin-rental-button ab-admin-rental-button--primary" type="button">${bookingActionLabel(booking.status)}</button>
                   <button class="ab-admin-rental-button ab-admin-rental-button--ghost" type="button">Voir</button>
                 </div>
               </article>
@@ -211,6 +222,12 @@ if (pageRoot) {
           Gérez les vélos en location, les tarifs, les statuts de retour, les réservations
           et la préparation opérationnelle depuis une seule interface premium.
         </p>
+        <div class="ab-admin-page-list ab-admin-page-list--centered" aria-label="Navigation des pages admin">
+          <a class="ab-admin-page-pill" href="../admin-pages/index.html">Hub admin</a>
+          <a class="ab-admin-page-pill ab-admin-page-pill--active" href="./index.html" aria-current="page">Admin location</a>
+          <a class="ab-admin-page-pill" href="../Admin-reparation/index.html">Admin réparation</a>
+          <a class="ab-admin-page-pill" href="../Ajout-vélo/index.html">Ajout vélo</a>
+        </div>
         <div class="ab-admin-rental-hero__actions">
           <a class="ab-admin-rental-button ab-admin-rental-button--primary" href="#admin-rental-dashboard-title">
             Ouvrir le dashboard

@@ -31,6 +31,12 @@
             Une interface pensée pour démarrer une prise en charge sans friction, lancer un diagnostic clair et préparer
             la suite de l’intervention dans un dossier structuré.
           </p>
+          <div class="ab-admin-page-list ab-admin-page-list--centered" aria-label="Navigation des pages admin">
+            <a class="ab-admin-page-pill" href="../admin-pages/index.html">Hub admin</a>
+            <a class="ab-admin-page-pill" href="../Admin-location/index.html">Admin location</a>
+            <a class="ab-admin-page-pill ab-admin-page-pill--active" href="./index.html" aria-current="page">Admin réparation</a>
+            <a class="ab-admin-page-pill" href="../Ajout-vélo/index.html">Ajout vélo</a>
+          </div>
           <div class="ab-admin-repair-hero__actions">
             <a class="ab-admin-repair-button ab-admin-repair-button--primary" href="#admin-repair-pec-title">
               Nouvelle PEC
@@ -52,29 +58,29 @@
           </div>
 
           <div class="ab-admin-repair-flow__steps">
-            <article class="ab-admin-repair-flow-card">
+            <a class="ab-admin-repair-flow-card" href="#admin-repair-step-entry">
               <span class="ab-admin-repair-flow-card__index">01</span>
               <h3 class="ab-admin-repair-flow-card__title">Identifier le vélo</h3>
               <p class="ab-admin-repair-flow-card__text">
                 Vélo, client, urgence, motif d’entrée.
               </p>
-            </article>
+            </a>
 
-            <article class="ab-admin-repair-flow-card">
+            <a class="ab-admin-repair-flow-card" href="#admin-repair-step-diagnostic">
               <span class="ab-admin-repair-flow-card__index">02</span>
               <h3 class="ab-admin-repair-flow-card__title">Documenter le diagnostic</h3>
               <p class="ab-admin-repair-flow-card__text">
                 État général, observations, devis et pièces.
               </p>
-            </article>
+            </a>
 
-            <article class="ab-admin-repair-flow-card">
+            <a class="ab-admin-repair-flow-card" href="#admin-repair-step-wrapup">
               <span class="ab-admin-repair-flow-card__index">03</span>
               <h3 class="ab-admin-repair-flow-card__title">Préparer la suite</h3>
               <p class="ab-admin-repair-flow-card__text">
                 Rapport, statut atelier et restitution client.
               </p>
-            </article>
+            </a>
           </div>
         </div>
       </section>
@@ -96,7 +102,7 @@
             </div>
 
             <form class="ab-admin-repair-form ab-admin-repair-form--pec" aria-label="Prise en charge vélo">
-              <section class="ab-admin-repair-form-block">
+              <section class="ab-admin-repair-form-block" id="admin-repair-step-entry">
                 <div class="ab-admin-repair-form-block__header">
                   <h3 class="ab-admin-repair-form-block__title">Informations d’entrée</h3>
                   <span class="ab-admin-repair-form-block__step">Étape 1</span>
@@ -150,7 +156,7 @@
                 </label>
               </section>
 
-              <section class="ab-admin-repair-form-block">
+              <section class="ab-admin-repair-form-block" id="admin-repair-step-diagnostic">
                 <div class="ab-admin-repair-form-block__header">
                   <h3 class="ab-admin-repair-form-block__title">Diagnostic atelier</h3>
                   <span class="ab-admin-repair-form-block__step">Étape 2</span>
@@ -198,7 +204,7 @@
                 </label>
               </section>
 
-              <section class="ab-admin-repair-form-block">
+              <section class="ab-admin-repair-form-block" id="admin-repair-step-wrapup">
                 <div class="ab-admin-repair-form-block__header">
                   <h3 class="ab-admin-repair-form-block__title">Prix, pièces et restitution</h3>
                   <span class="ab-admin-repair-form-block__step">Étape 3</span>

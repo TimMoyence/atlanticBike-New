@@ -59,9 +59,13 @@
 }
 
 .ab-admin-hero .ab-admin-page-list {
-  justify-content: center;
   margin-top: 28px;
   margin-bottom: 0;
+}
+
+.ab-admin-panel .ab-admin-page-list {
+  margin-top: 0;
+  margin-bottom: 22px;
 }
 
 .ab-admin-media,
@@ -151,34 +155,6 @@
   margin: 10px 0 0;
   font-size: 14px;
   line-height: 1.65;
-}
-
-.ab-admin-page-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 22px;
-}
-
-.ab-admin-page-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 36px;
-  padding: 0 14px;
-  border: 1px solid rgba(17, 17, 17, 0.12);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.62);
-  font: inherit;
-  font-size: 18px;
-  color: #111111;
-  cursor: pointer;
-}
-
-.ab-admin-page-pill--active {
-  background: #111111;
-  color: #ffffff;
-  border-color: #111111;
 }
 
 .ab-admin-slot-list {

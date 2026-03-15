@@ -77,6 +77,11 @@
   line-height: 1.72;
 }
 
+.ab-admin-rental-hero .ab-admin-page-list {
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
 .ab-admin-rental-hero__actions,
 .ab-admin-rental-form__actions,
 .ab-admin-rental-booking-card__actions,
@@ -230,6 +235,12 @@
   max-width: 430px;
   font-size: 14px;
   line-height: 1.7;
+}
+
+#admin-rental-dashboard-title,
+#admin-rental-bookings-title,
+#admin-rental-add-title {
+  scroll-margin-top: 110px;
 }
 
 .ab-admin-rental-main__grid {
@@ -455,6 +466,14 @@
 
 .ab-admin-rental-table tbody tr:nth-child(odd) {
   background: rgba(17, 17, 17, 0.04);
+}
+
+.ab-admin-rental-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.ab-admin-rental-table tbody tr:hover {
+  background: rgba(147, 199, 125, 0.12);
 }
 
 .ab-admin-rental-table__main-cell {

@@ -65,6 +65,11 @@
   line-height: 1.72;
 }
 
+.ab-admin-bike-hero .ab-admin-page-list {
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
 .ab-admin-bike-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) 340px;
@@ -228,6 +233,14 @@
 
 .ab-admin-bike-table tbody tr:nth-child(odd) {
   background: rgba(17, 17, 17, 0.04);
+}
+
+.ab-admin-bike-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.ab-admin-bike-table tbody tr:hover {
+  background: rgba(147, 199, 125, 0.12);
 }
 
 .ab-admin-bike-pill {
