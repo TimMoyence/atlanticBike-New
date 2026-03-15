@@ -1,0 +1,475 @@
+.model-page {
+  background: var(--ab-color-page-bg);
+}
+
+.ab-used-container {
+  width: min(
+    calc(100% - (var(--ab-layout-inline) * 2)),
+    var(--ab-layout-max-width)
+  );
+  margin: 0 auto;
+}
+
+.ab-used-page {
+  padding-bottom: 96px;
+}
+
+.ab-used-hero,
+.ab-used-story,
+.ab-used-gallery,
+.ab-used-journey,
+.ab-used-testimonials,
+.ab-used-cta,
+.ab-used-contact {
+  padding: 0 0 96px;
+}
+
+.ab-used-hero {
+  padding-top: 88px;
+}
+
+.ab-used-gallery,
+.ab-used-cta,
+.ab-used-contact {
+  background: #ffffff;
+  padding-top: 72px;
+}
+
+.ab-used-testimonials {
+  background: var(--ab-color-page-bg);
+  padding-top: 72px;
+}
+
+.ab-used-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ab-used-eyebrow {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.ab-used-hero__title,
+.ab-used-section-title,
+.ab-used-journey-card h3,
+.ab-used-site-card h3,
+.ab-used-cta-card__title {
+  margin: 0;
+  letter-spacing: -0.05em;
+  color: #111111;
+}
+
+.ab-used-hero__title {
+  max-width: 760px;
+  font-size: clamp(48px, 5.2vw, 72px);
+  line-height: 1.02;
+}
+
+.ab-used-hero__text,
+.ab-used-section-text,
+.ab-used-journey-card p,
+.ab-used-testimonial-card p,
+.ab-used-testimonial-card__author span,
+.ab-used-site-card p,
+.ab-used-contact-item span,
+.ab-used-cta-card__text {
+  color: rgba(17, 17, 17, 0.76);
+}
+
+.ab-used-hero__text,
+.ab-used-section-text,
+.ab-used-cta-card__text {
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.ab-used-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ab-used-actions--center {
+  justify-content: center;
+}
+
+.ab-used-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #111111;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ab-used-button:hover,
+.ab-used-link:hover {
+  transform: translateY(-1px);
+}
+
+.ab-used-button--primary {
+  background: var(--ab-color-accent);
+}
+
+.ab-used-button--primary:hover {
+  background: var(--ab-color-accent);
+}
+
+.ab-used-button--secondary {
+  background: #e7e7e4;
+}
+
+.ab-used-button--secondary:hover {
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+.ab-used-button--dark {
+  background: #111111;
+  color: #ffffff;
+}
+
+.ab-used-button--dark:hover {
+  background: #202020;
+}
+
+.ab-used-button--ghost {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.ab-used-button--ghost:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ab-used-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ab-used-link::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.ab-used-story__grid,
+.ab-used-contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 520px;
+  gap: 40px;
+  align-items: center;
+}
+
+.ab-used-section-title {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.08;
+}
+
+.ab-used-visual-card,
+.ab-used-contact-map,
+.ab-used-gallery-grid__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #dcdcd8;
+  color: rgba(120, 120, 120, 0.52);
+}
+
+.ab-used-visual-card {
+  min-height: 360px;
+}
+
+.ab-used-visual-card__icon {
+  display: inline-flex;
+  width: 110px;
+  height: 110px;
+}
+
+.ab-used-visual-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ab-used-section-heading--centered {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.ab-used-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ab-used-gallery-grid__item {
+  min-height: 180px;
+  font-size: 42px;
+}
+
+.ab-used-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.ab-used-journey-card {
+  text-align: center;
+}
+
+.ab-used-journey-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 30px;
+  color: #111111;
+}
+
+.ab-used-journey-card h3 {
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.ab-used-journey-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ab-used-journey__actions {
+  margin-top: 28px;
+}
+
+.ab-used-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ab-used-testimonial-card {
+  padding: 22px;
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.ab-used-stars {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #111111;
+}
+
+.ab-used-testimonial-card p {
+  margin: 0 0 18px;
+}
+
+.ab-used-testimonial-card__author {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.ab-used-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.08);
+}
+
+.ab-used-testimonial-card__author strong {
+  display: block;
+  font-size: 16px;
+  color: #111111;
+}
+
+.ab-used-testimonial-card__author span {
+  display: block;
+  font-size: 14px;
+}
+
+.ab-used-cta-card {
+  padding: 36px 28px;
+  border-radius: 14px;
+  background: #8f8f8f;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ab-used-cta-card__title {
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.08;
+  margin-bottom: 12px;
+}
+
+.ab-used-cta-card__text {
+  max-width: 760px;
+  margin: 0 auto 22px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.ab-used-site-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.ab-used-site-card {
+  padding-left: 18px;
+  border-left: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.ab-used-site-card h3 {
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.ab-used-site-card p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ab-used-contact-side {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-used-contact-details {
+  display: grid;
+  gap: 14px;
+}
+
+.ab-used-contact-item {
+  display: grid;
+  gap: 6px;
+}
+
+.ab-used-contact-item strong {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #111111;
+}
+
+.ab-used-contact-map {
+  min-height: 220px;
+}
+
+.ab-used-contact-map__icon {
+  font-size: 72px;
+  line-height: 1;
+}
+
+@media (max-width: 1180px) {
+  .ab-used-story__grid,
+  .ab-used-contact__grid,
+  .ab-used-gallery-grid,
+  .ab-used-journey-grid,
+  .ab-used-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-used-container {
+    width: min(calc(100% - 36px), 1320px);
+  }
+
+  .ab-used-page,
+  .ab-used-hero,
+  .ab-used-story,
+  .ab-used-gallery,
+  .ab-used-journey,
+  .ab-used-testimonials,
+  .ab-used-cta,
+  .ab-used-contact {
+    padding-bottom: 84px;
+  }
+
+  .ab-used-hero,
+  .ab-used-gallery,
+  .ab-used-cta,
+  .ab-used-contact,
+  .ab-used-testimonials {
+    padding-top: 56px;
+  }
+
+  .ab-used-hero {
+    padding-top: 70px;
+  }
+
+  .ab-used-hero__title,
+  .ab-used-section-title,
+  .ab-used-journey-card h3,
+  .ab-used-site-card h3,
+  .ab-used-cta-card__title {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .ab-used-eyebrow,
+  .ab-used-hero__text,
+  .ab-used-section-text,
+  .ab-used-journey-card p,
+  .ab-used-testimonial-card p,
+  .ab-used-testimonial-card__author span,
+  .ab-used-site-card p,
+  .ab-used-contact-item span,
+  .ab-used-cta-card__text,
+  .ab-used-button,
+  .ab-used-link {
+    font-size: 16px;
+  }
+
+  .ab-used-visual-card,
+  .ab-used-contact-map {
+    min-height: 220px;
+  }
+
+  .ab-used-visual-card__icon {
+    width: 88px;
+    height: 88px;
+  }
+
+  .ab-used-gallery-grid__item {
+    min-height: 160px;
+  }
+
+  .ab-used-testimonial-card,
+  .ab-used-cta-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+}

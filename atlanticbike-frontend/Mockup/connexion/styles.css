@@ -1,0 +1,357 @@
+.model-page {
+  background: var(--ab-color-page-bg);
+}
+
+.ab-admin-login-container {
+  width: min(calc(100% - 64px), 1280px);
+  margin: 0 auto;
+}
+
+.ab-admin-login-page {
+  padding-bottom: 96px;
+}
+
+.ab-admin-login-hero,
+.ab-admin-login-auth {
+  padding: 0 0 96px;
+}
+
+.ab-admin-login-hero {
+  padding-top: 88px;
+}
+
+.ab-admin-login-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ab-admin-login-eyebrow,
+.ab-admin-login-field__label {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.ab-admin-login-hero__title,
+.ab-admin-login-card__title {
+  margin: 0;
+  letter-spacing: -0.05em;
+  color: #111111;
+}
+
+.ab-admin-login-hero__title {
+  max-width: 980px;
+  font-size: clamp(48px, 5.4vw, 76px);
+  line-height: 1.02;
+}
+
+.ab-admin-login-hero__text,
+.ab-admin-login-card__text,
+.ab-admin-login-legal,
+.ab-admin-login-list li,
+.ab-admin-login-help__item span,
+.ab-admin-login-check__label {
+  color: rgba(17, 17, 17, 0.76);
+}
+
+.ab-admin-login-hero__text,
+.ab-admin-login-card__text,
+.ab-admin-login-list li,
+.ab-admin-login-help__item span {
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.ab-admin-login-auth__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.ab-admin-login-side {
+  display: grid;
+  gap: 24px;
+}
+
+.ab-admin-login-card {
+  padding: 28px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 24px;
+  background: var(--ab-color-panel);
+}
+
+.ab-admin-login-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ab-admin-login-card__title {
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.08;
+}
+
+.ab-admin-login-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--ab-color-accent);
+  font-size: 12px;
+  line-height: 1;
+  color: #111111;
+  white-space: nowrap;
+}
+
+.ab-admin-login-form {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-admin-login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ab-admin-login-field__error {
+  min-height: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #b13a3a;
+}
+
+.ab-admin-login-password-wrap {
+  position: relative;
+}
+
+.ab-admin-login-password-wrap input {
+  padding-right: 96px;
+}
+
+.ab-admin-login-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  font: inherit;
+  font-size: 14px;
+  color: #111111;
+  cursor: pointer;
+}
+
+.ab-admin-login-password-toggle:hover {
+  border-color: rgba(17, 17, 17, 0.2);
+}
+
+.ab-admin-login-form__meta,
+.ab-admin-login-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ab-admin-login-actions {
+  justify-content: flex-start;
+}
+
+.ab-admin-login-check {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ab-admin-login-check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ab-admin-login-check__box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(17, 17, 17, 0.18);
+  background: #ffffff;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.ab-admin-login-check input:checked + .ab-admin-login-check__box {
+  background: var(--ab-color-accent);
+  border-color: #93c77d;
+}
+
+.ab-admin-login-check__label {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ab-admin-login-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #111111;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ab-admin-login-button:hover,
+.ab-admin-login-link:hover {
+  transform: translateY(-1px);
+}
+
+.ab-admin-login-button--primary {
+  background: var(--ab-color-accent);
+}
+
+.ab-admin-login-button--primary:hover {
+  background: var(--ab-color-accent);
+}
+
+.ab-admin-login-button--secondary {
+  background: #e7e7e4;
+}
+
+.ab-admin-login-button--secondary:hover {
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+.ab-admin-login-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: #111111;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ab-admin-login-legal {
+  margin: 0;
+  max-width: 720px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.ab-admin-login-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ab-admin-login-list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.ab-admin-login-list li::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.ab-admin-login-help {
+  display: grid;
+  gap: 14px;
+}
+
+.ab-admin-login-help__item {
+  display: grid;
+  gap: 6px;
+}
+
+.ab-admin-login-help__item strong {
+  font-size: 18px;
+  color: #111111;
+}
+
+@media (max-width: 1100px) {
+  .ab-admin-login-auth__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-admin-login-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-admin-login-container {
+    width: min(calc(100% - 36px), 1280px);
+  }
+
+  .ab-admin-login-page,
+  .ab-admin-login-hero,
+  .ab-admin-login-auth {
+    padding-bottom: 84px;
+  }
+
+  .ab-admin-login-hero {
+    padding-top: 70px;
+  }
+
+  .ab-admin-login-hero__title,
+  .ab-admin-login-card__title {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .ab-admin-login-eyebrow,
+  .ab-admin-login-field__label,
+  .ab-admin-login-hero__text,
+  .ab-admin-login-card__text,
+  .ab-admin-login-list li,
+  .ab-admin-login-help__item span,
+  .ab-admin-login-link,
+  .ab-admin-login-button,
+  .ab-admin-login-check__label {
+    font-size: 16px;
+  }
+
+  .ab-admin-login-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .ab-admin-login-form__meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,475 @@
+.model-page {
+  background: var(--ab-color-page-bg);
+}
+
+.ab-ebike-product-container {
+  width: min(
+    calc(100% - (var(--ab-layout-inline) * 2)),
+    var(--ab-layout-max-width)
+  );
+  margin: 0 auto;
+}
+
+.ab-ebike-product-page {
+  padding-bottom: 96px;
+}
+
+.ab-ebike-product-hero,
+.ab-ebike-product-specs,
+.ab-ebike-product-details,
+.ab-ebike-product-compare,
+.ab-ebike-product-booking,
+.ab-ebike-product-cta {
+  padding: 0 0 96px;
+}
+
+.ab-ebike-product-hero {
+  padding-top: 88px;
+}
+
+.ab-ebike-product-hero__grid,
+.ab-ebike-product-feature-grid,
+.ab-ebike-product-booking__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 500px;
+  gap: 40px;
+  align-items: center;
+}
+
+.ab-ebike-product-hero__title,
+.ab-ebike-product-section-title,
+.ab-ebike-product-panel__title,
+.ab-ebike-product-booking-card__title {
+  margin: 0;
+  letter-spacing: -0.05em;
+  color: #111111;
+}
+
+.ab-ebike-product-eyebrow,
+.ab-ebike-product-field__label {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.ab-ebike-product-hero__title {
+  max-width: 760px;
+  font-size: clamp(48px, 5.4vw, 76px);
+  line-height: 1.02;
+}
+
+.ab-ebike-product-hero__text,
+.ab-ebike-product-section-text,
+.ab-ebike-product-list li,
+.ab-ebike-product-summary-item span,
+.ab-ebike-product-spec-card__label,
+.ab-ebike-product-spec-card__text,
+.ab-ebike-product-booking-card__price-row span {
+  color: rgba(17, 17, 17, 0.76);
+}
+
+.ab-ebike-product-hero__text,
+.ab-ebike-product-section-text {
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.ab-ebike-product-hero__badges,
+.ab-ebike-product-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ab-ebike-product-badge,
+.ab-ebike-product-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 1;
+  color: #111111;
+  background: rgba(17, 17, 17, 0.08);
+}
+
+.ab-ebike-product-pill.is-current {
+  background: var(--ab-color-accent);
+}
+
+.ab-ebike-product-price-card,
+.ab-ebike-product-panel,
+.ab-ebike-product-spec-card,
+.ab-ebike-product-booking-card {
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 22px;
+  background: var(--ab-color-panel);
+}
+
+.ab-ebike-product-price-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 28px 0;
+  padding: 20px 22px;
+}
+
+.ab-ebike-product-price-card__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.68);
+}
+
+.ab-ebike-product-price-card__value {
+  display: block;
+  font-size: clamp(40px, 4vw, 56px);
+  line-height: 1;
+  color: #111111;
+}
+
+.ab-ebike-product-price-card__value--small {
+  font-size: clamp(28px, 3vw, 38px);
+}
+
+.ab-ebike-product-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #111111;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ab-ebike-product-button:hover,
+.ab-ebike-product-link:hover {
+  transform: translateY(-1px);
+}
+
+.ab-ebike-product-button--primary {
+  background: var(--ab-color-accent);
+}
+
+.ab-ebike-product-button--primary:hover {
+  background: var(--ab-color-accent);
+}
+
+.ab-ebike-product-button--secondary {
+  background: #e7e7e4;
+}
+
+.ab-ebike-product-button--secondary:hover {
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+.ab-ebike-product-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ab-ebike-product-link::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.ab-ebike-product-visual-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+  border-radius: 22px;
+  background: #dcdcd8;
+  color: rgba(120, 120, 120, 0.52);
+}
+
+.ab-ebike-product-visual-card__icon {
+  display: inline-flex;
+  width: 118px;
+  height: 118px;
+}
+
+.ab-ebike-product-visual-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ab-ebike-product-section-heading--split {
+  display: grid;
+  grid-template-columns: minmax(0, 760px) auto;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.ab-ebike-product-section-title {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.06;
+}
+
+.ab-ebike-product-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ab-ebike-product-spec-card {
+  padding: 22px;
+}
+
+.ab-ebike-product-spec-card strong {
+  display: block;
+  font-size: clamp(34px, 3vw, 46px);
+  line-height: 1;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.ab-ebike-product-spec-card__label {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.ab-ebike-product-spec-card__text {
+  display: block;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.ab-ebike-product-panel,
+.ab-ebike-product-booking-card {
+  padding: 24px;
+}
+
+.ab-ebike-product-panel__title,
+.ab-ebike-product-booking-card__title {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.1;
+}
+
+.ab-ebike-product-list {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ab-ebike-product-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ab-ebike-product-list li::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.ab-ebike-product-summary-list {
+  display: grid;
+  gap: 16px;
+}
+
+.ab-ebike-product-summary-item {
+  display: grid;
+  gap: 6px;
+}
+
+.ab-ebike-product-summary-item strong {
+  font-size: 18px;
+  line-height: 1.45;
+  color: #111111;
+}
+
+.ab-ebike-product-table-wrap {
+  overflow-x: auto;
+}
+
+.ab-ebike-product-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.ab-ebike-product-table th,
+.ab-ebike-product-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.ab-ebike-product-table thead th {
+  border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+  color: #111111;
+}
+
+.ab-ebike-product-table tbody tr:nth-child(odd) {
+  background: rgba(17, 17, 17, 0.04);
+}
+
+.ab-ebike-product-table tbody tr.is-current {
+  background: rgba(148, 199, 132, 0.14);
+}
+
+.ab-ebike-product-form {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-ebike-product-form-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-ebike-product-form-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ab-ebike-product-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ab-ebike-product-booking-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.ab-ebike-product-booking-card__price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0 4px;
+}
+
+.ab-ebike-product-booking-card__price-row strong {
+  font-size: 24px;
+  color: #111111;
+}
+
+.ab-ebike-product-cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ab-ebike-product-actions--center {
+  justify-content: center;
+}
+
+@media (max-width: 1180px) {
+  .ab-ebike-product-hero__grid,
+  .ab-ebike-product-feature-grid,
+  .ab-ebike-product-booking__grid,
+  .ab-ebike-product-section-heading--split,
+  .ab-ebike-product-spec-grid,
+  .ab-ebike-product-form-grid--two {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-ebike-product-price-card,
+  .ab-ebike-product-booking-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-ebike-product-container {
+    width: min(calc(100% - 36px), 1320px);
+  }
+
+  .ab-ebike-product-page,
+  .ab-ebike-product-hero,
+  .ab-ebike-product-specs,
+  .ab-ebike-product-details,
+  .ab-ebike-product-compare,
+  .ab-ebike-product-booking,
+  .ab-ebike-product-cta {
+    padding-bottom: 84px;
+  }
+
+  .ab-ebike-product-hero {
+    padding-top: 70px;
+  }
+
+  .ab-ebike-product-hero__title,
+  .ab-ebike-product-section-title,
+  .ab-ebike-product-panel__title,
+  .ab-ebike-product-booking-card__title {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .ab-ebike-product-eyebrow,
+  .ab-ebike-product-hero__text,
+  .ab-ebike-product-section-text,
+  .ab-ebike-product-list li,
+  .ab-ebike-product-summary-item span,
+  .ab-ebike-product-spec-card__label,
+  .ab-ebike-product-spec-card__text,
+  .ab-ebike-product-button,
+  .ab-ebike-product-link,
+  .ab-ebike-product-booking-card__price-row span,
+  .ab-ebike-product-field__label {
+    font-size: 16px;
+  }
+
+  .ab-ebike-product-visual-card {
+    min-height: 280px;
+  }
+
+  .ab-ebike-product-visual-card__icon {
+    width: 88px;
+    height: 88px;
+  }
+
+  .ab-ebike-product-panel,
+  .ab-ebike-product-booking-card,
+  .ab-ebike-product-spec-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+}

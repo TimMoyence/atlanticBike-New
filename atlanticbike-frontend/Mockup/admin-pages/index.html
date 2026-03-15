@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AtlanticBike | Hub admin</title>
+  <meta name="description"
+    content="Hub admin AtlanticBike pour accéder à la gestion des pages, de la flotte, des réparations et de l’ajout vélo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/global.css" />
+  <link rel="stylesheet" href="../shared/components.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="ab-page-shell model-page">
+    <div data-navbar-root></div>
+
+    <main class="ab-page-main">
+      <section class="ab-admin-hero" aria-labelledby="admin-hero-title">
+        <div class="ab-admin-container ab-admin-hero__inner">
+          <p class="ab-admin-hero__eyebrow">Admin</p>
+          <h1 id="admin-hero-title" class="ab-admin-hero__title">Gestion des pages et des médias</h1>
+          <p class="ab-admin-hero__text">
+            Une interface pensée pour modifier rapidement les pages du site, avec une priorité claire : gérer les images
+            de manière fiable, lisible et simple à utiliser.
+          </p>
+
+          <div class="ab-admin-page-list" aria-label="Accès rapides admin">
+            <a class="ab-admin-page-pill ab-admin-page-pill--active" href="./index.html">Hub admin</a>
+            <a class="ab-admin-page-pill" href="../Admin-location/index.html">Admin location</a>
+            <a class="ab-admin-page-pill" href="../Admin-reparation/index.html">Admin réparation</a>
+            <a class="ab-admin-page-pill" href="../Ajout-vélo/index.html">Ajout vélo</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ab-admin-media" aria-labelledby="admin-media-title">
+        <div class="ab-admin-container">
+          <div class="ab-admin-section-heading ab-admin-section-heading--split">
+            <div>
+              <p class="ab-admin-section-heading__eyebrow">Priorité</p>
+              <h2 id="admin-media-title" class="ab-admin-section-heading__title">Gestion des images</h2>
+            </div>
+            <p class="ab-admin-section-heading__text">
+              Remplacez une image existante, ajoutez un nouveau visuel ou préparez un lot d’images pour une page
+              précise sans perdre le fil des emplacements.
+            </p>
+          </div>
+
+          <div class="ab-admin-media__grid">
+            <aside class="ab-admin-panel ab-admin-panel--sidebar" aria-label="Pages et emplacements">
+              <div class="ab-admin-panel__header">
+                <h3 class="ab-admin-panel__title">Pages du site</h3>
+                <p class="ab-admin-panel__text">Choisissez d’abord la page à mettre à jour.</p>
+              </div>
+
+              <div class="ab-admin-page-list">
+                <a class="ab-admin-page-pill ab-admin-page-pill--active" href="../accueil/index.html">Accueil</a>
+                <a class="ab-admin-page-pill" href="../services/index.html">Services</a>
+                <a class="ab-admin-page-pill" href="../location-vélo/index.html">Location vélo</a>
+                <a class="ab-admin-page-pill" href="../réparation-vélo/index.html">Réparation vélo</a>
+                <a class="ab-admin-page-pill" href="../contact/index.html">Contact</a>
+              </div>
+
+              <div class="ab-admin-slot-list">
+                <article class="ab-admin-slot-card ab-admin-slot-card--active">
+                  <div>
+                    <p class="ab-admin-slot-card__label">Emplacement</p>
+                    <h4 class="ab-admin-slot-card__title">Hero principal</h4>
+                  </div>
+                  <span class="ab-admin-slot-card__meta">1920 × 1080</span>
+                </article>
+
+                <article class="ab-admin-slot-card">
+                  <div>
+                    <p class="ab-admin-slot-card__label">Emplacement</p>
+                    <h4 class="ab-admin-slot-card__title">Carte secondaire</h4>
+                  </div>
+                  <span class="ab-admin-slot-card__meta">1200 × 900</span>
+                </article>
+
+                <article class="ab-admin-slot-card">
+                  <div>
+                    <p class="ab-admin-slot-card__label">Emplacement</p>
+                    <h4 class="ab-admin-slot-card__title">Galerie / visuel</h4>
+                  </div>
+                  <span class="ab-admin-slot-card__meta">1600 × 1200</span>
+                </article>
+              </div>
+            </aside>
+
+            <div class="ab-admin-panel ab-admin-panel--main">
+              <div class="ab-admin-upload-layout">
+                <div class="ab-admin-upload-main">
+                  <div class="ab-admin-panel__header ab-admin-panel__header--row">
+                    <div>
+                      <p class="ab-admin-panel__eyebrow">Image sélectionnée</p>
+                      <h3 class="ab-admin-panel__title">Hero principal — Accueil</h3>
+                    </div>
+                    <span class="ab-admin-status-badge">Prêt à remplacer</span>
+                  </div>
+
+                  <div class="ab-admin-preview-card" aria-hidden="true">
+                    <span class="ab-admin-preview-card__icon">
+                      <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="9" y="14" width="54" height="44" rx="6" fill="currentColor" opacity="0.22" />
+                        <path
+                          d="M20 49L31.5 35.5C32.3109 34.5489 33.7837 34.5797 34.5542 35.5637L41 43.8L46.5674 36.6838C47.3452 35.69 48.8423 35.6712 49.6448 36.645L58 46.7778"
+                          stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                          opacity="0.5" />
+                        <circle cx="30" cy="26" r="5" fill="currentColor" opacity="0.5" />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <form class="ab-admin-form ab-admin-form--media" aria-label="Gestion des images">
+                    <div class="ab-admin-form__grid ab-admin-form__grid--two">
+                      <label class="ab-admin-field">
+                        <span class="ab-admin-field__label">Page ciblée</span>
+                        <select class="ab-admin-field__select" name="page">
+                          <option>Accueil</option>
+                          <option>Services</option>
+                          <option>Location vélo</option>
+                          <option>Réparation vélo</option>
+                          <option>Contact</option>
+                        </select>
+                      </label>
+
+                      <label class="ab-admin-field">
+                        <span class="ab-admin-field__label">Emplacement</span>
+                        <select class="ab-admin-field__select" name="slot">
+                          <option>Hero principal</option>
+                          <option>Carte secondaire</option>
+                          <option>Galerie / visuel</option>
+                        </select>
+                      </label>
+                    </div>
+
+                    <div class="ab-admin-form__grid ab-admin-form__grid--two">
+                      <label class="ab-admin-field">
+                        <span class="ab-admin-field__label">Action</span>
+                        <select class="ab-admin-field__select" name="action">
+                          <option>Remplacer l’image</option>
+                          <option>Ajouter une nouvelle image</option>
+                          <option>Dupliquer puis modifier</option>
+                        </select>
+                      </label>
+
+                      <label class="ab-admin-field">
+                        <span class="ab-admin-field__label">Nom du fichier</span>
+                        <input class="ab-admin-field__input" type="text" name="filename" placeholder="hero-home-v2.webp" />
+                      </label>
+                    </div>
+
+                    <label class="ab-admin-field ab-admin-field--upload">
+                      <span class="ab-admin-field__label">Fichier image</span>
+                      <div class="ab-admin-upload-box">
+                        <div>
+                          <strong>Glissez-déposez votre image</strong>
+                          <p>ou cliquez pour sélectionner un fichier</p>
+                        </div>
+                        <button class="ab-admin-button ab-admin-button--muted" type="button">Choisir un fichier</button>
+                      </div>
+                    </label>
+
+                    <div class="ab-admin-form__grid ab-admin-form__grid--two">
+                      <label class="ab-admin-field">
+                        <span class="ab-admin-field__label">Texte alternatif</span>
+                        <input class="ab-admin-field__input" type="text" name="alt"
+                          placeholder="Cycliste sur la plage au coucher du soleil" />
+                      </label>
+
+                      <label class="ab-admin-field">
+                        <span class="ab-admin-field__label">Dimensions recommandées</span>
+                        <input class="ab-admin-field__input" type="text" name="size" value="1920 × 1080" readonly />
+                      </label>
+                    </div>
+
+                    <label class="ab-admin-field ab-admin-field--textarea">
+                      <span class="ab-admin-field__label">Commentaire de modification</span>
+                      <textarea class="ab-admin-field__textarea" name="media-note"
+                        placeholder="Précisez la raison du changement ou le contexte de la nouvelle image"></textarea>
+                    </label>
+
+                    <div class="ab-admin-form__actions">
+                      <button class="ab-admin-button ab-admin-button--primary" type="submit">Enregistrer l’image</button>
+                      <button class="ab-admin-button ab-admin-button--muted" type="button">Prévisualiser</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="ab-admin-upload-side">
+                  <div class="ab-admin-panel ab-admin-panel--soft">
+                    <div class="ab-admin-panel__header">
+                      <p class="ab-admin-panel__eyebrow">Contrôle qualité</p>
+                      <h3 class="ab-admin-panel__title">Checklist image</h3>
+                    </div>
+                    <ul class="ab-admin-checklist">
+                      <li>Le bon format de fichier est sélectionné</li>
+                      <li>Le texte alternatif est renseigné</li>
+                      <li>Les dimensions correspondent à l’emplacement</li>
+                      <li>Le nom du fichier reste clair et exploitable</li>
+                    </ul>
+                  </div>
+
+                  <div class="ab-admin-panel ab-admin-panel--soft">
+                    <div class="ab-admin-panel__header">
+                      <p class="ab-admin-panel__eyebrow">Historique</p>
+                      <h3 class="ab-admin-panel__title">Dernières actions</h3>
+                    </div>
+                    <div class="ab-admin-activity-list">
+                      <article class="ab-admin-activity-item">
+                        <strong>Accueil / Hero principal</strong>
+                        <span>Image remplacée il y a 2 jours</span>
+                      </article>
+                      <article class="ab-admin-activity-item">
+                        <strong>Services / Carte 2</strong>
+                        <span>Nouveau visuel ajouté</span>
+                      </article>
+                      <article class="ab-admin-activity-item">
+                        <strong>Contact / Galerie</strong>
+                        <span>Prévisualisation validée</span>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ab-admin-content" aria-labelledby="admin-content-title">
+        <div class="ab-admin-container">
+          <div class="ab-admin-section-heading ab-admin-section-heading--split">
+            <div>
+              <p class="ab-admin-section-heading__eyebrow">Secondaire</p>
+              <h2 id="admin-content-title" class="ab-admin-section-heading__title">Modification du contenu</h2>
+            </div>
+            <p class="ab-admin-section-heading__text">
+              Une zone plus simple pour les changements textuels : titres, paragraphes et messages visibles sur chaque
+              page.
+            </p>
+          </div>
+
+          <div class="ab-admin-content__grid">
+            <div class="ab-admin-panel ab-admin-panel--main">
+              <form class="ab-admin-form" aria-label="Modification du contenu">
+                <div class="ab-admin-form__grid ab-admin-form__grid--two">
+                  <label class="ab-admin-field">
+                    <span class="ab-admin-field__label">Page</span>
+                    <select class="ab-admin-field__select" name="content-page">
+                      <option>Accueil</option>
+                      <option>Services</option>
+                      <option>Location vélo</option>
+                      <option>Réparation vélo</option>
+                      <option>Contact</option>
+                    </select>
+                  </label>
+
+                  <label class="ab-admin-field">
+                    <span class="ab-admin-field__label">Bloc</span>
+                    <select class="ab-admin-field__select" name="content-block">
+                      <option>Hero</option>
+                      <option>Section principale</option>
+                      <option>CTA</option>
+                      <option>Footer</option>
+                    </select>
+                  </label>
+                </div>
+
+                <label class="ab-admin-field">
+                  <span class="ab-admin-field__label">Titre</span>
+                  <input class="ab-admin-field__input" type="text" name="content-title"
+                    placeholder="Nouveau titre de section" />
+                </label>
+
+                <label class="ab-admin-field ab-admin-field--textarea">
+                  <span class="ab-admin-field__label">Texte</span>
+                  <textarea class="ab-admin-field__textarea" name="content-message"
+                    placeholder="Décrivez ou remplacez le texte affiché sur la page"></textarea>
+                </label>
+
+                <div class="ab-admin-form__actions">
+                  <button class="ab-admin-button ab-admin-button--primary" type="submit">Enregistrer le contenu</button>
+                  <button class="ab-admin-button ab-admin-button--muted" type="button">Prévisualiser</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="ab-admin-panel ab-admin-panel--soft">
+              <div class="ab-admin-panel__header">
+                <p class="ab-admin-panel__eyebrow">Conseil</p>
+                <h3 class="ab-admin-panel__title">Ordre recommandé</h3>
+                <p class="ab-admin-panel__text">Commencez par les images, puis ajustez le texte en fonction du visuel
+                  réellement retenu.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer-root></div>
+  </div>
+
+  <script src="../shared/global.js"></script>
+  <script src="../shared/components.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

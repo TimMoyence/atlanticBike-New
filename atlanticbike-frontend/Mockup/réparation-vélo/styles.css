@@ -1,0 +1,574 @@
+.model-page {
+  background: var(--ab-color-page-bg);
+}
+
+.ab-repair-container {
+  width: min(
+    calc(100% - (var(--ab-layout-inline) * 2)),
+    var(--ab-layout-max-width)
+  );
+  margin: 0 auto;
+}
+
+.ab-repair-page {
+  padding-bottom: 96px;
+}
+
+.ab-repair-hero,
+.ab-repair-feature,
+.ab-repair-services,
+.ab-repair-pricing,
+.ab-repair-workshop,
+.ab-repair-booking,
+.ab-repair-testimonials,
+.ab-repair-contact {
+  padding: 0 0 96px;
+}
+
+.ab-repair-hero {
+  padding-top: 88px;
+}
+
+.ab-repair-services,
+.ab-repair-workshop,
+.ab-repair-contact {
+  background: #ffffff;
+  padding-top: 72px;
+}
+
+.ab-repair-booking {
+  background: var(--ab-color-page-bg);
+  padding-top: 72px;
+}
+
+.ab-repair-hero__inner,
+.ab-repair-booking__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ab-repair-eyebrow {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.ab-repair-hero__title,
+.ab-repair-section-title,
+.ab-repair-service-card h3,
+.ab-repair-site-card h3,
+.ab-repair-pricing-card h3 {
+  margin: 0;
+  letter-spacing: -0.05em;
+  color: #111111;
+}
+
+.ab-repair-hero__title {
+  max-width: 780px;
+  font-size: clamp(48px, 5.2vw, 72px);
+  line-height: 1.02;
+}
+
+.ab-repair-hero__text,
+.ab-repair-section-text,
+.ab-repair-list li,
+.ab-repair-service-card p,
+.ab-repair-testimonial-card p,
+.ab-repair-testimonial-card__author span,
+.ab-repair-site-card p,
+.ab-repair-contact-item span,
+.ab-repair-pricing-card p,
+.ab-repair-pricing-card li {
+  color: rgba(17, 17, 17, 0.76);
+}
+
+.ab-repair-hero__text,
+.ab-repair-section-text,
+.ab-repair-testimonial-card p {
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.ab-repair-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ab-repair-actions--center {
+  justify-content: center;
+}
+
+.ab-repair-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #111111;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ab-repair-button:hover,
+.ab-repair-link:hover {
+  transform: translateY(-1px);
+}
+
+.ab-repair-button--primary {
+  background: var(--ab-color-accent);
+}
+
+.ab-repair-button--primary:hover {
+  background: var(--ab-color-accent);
+}
+
+.ab-repair-button--secondary {
+  background: #e7e7e4;
+}
+
+.ab-repair-button--secondary:hover {
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+.ab-repair-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ab-repair-link::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.ab-repair-feature__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 40px;
+  align-items: center;
+}
+
+.ab-repair-feature__grid--reverse {
+  grid-template-columns: 420px minmax(0, 1fr);
+}
+
+.ab-repair-section-title {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.08;
+}
+
+.ab-repair-visual-card,
+.ab-repair-service-card__media,
+.ab-repair-contact-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #dcdcd8;
+  color: rgba(120, 120, 120, 0.52);
+}
+
+.ab-repair-visual-card {
+  min-height: 380px;
+}
+
+.ab-repair-visual-card__icon {
+  display: inline-flex;
+  width: 110px;
+  height: 110px;
+}
+
+.ab-repair-visual-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ab-repair-list {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.ab-repair-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ab-repair-list li::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.ab-repair-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 28px;
+}
+
+.ab-repair-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.06);
+  font-size: 15px;
+  color: #111111;
+}
+
+.ab-repair-section-heading--centered {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.ab-repair-service-grid,
+.ab-repair-pricing-grid,
+.ab-repair-testimonial-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.ab-repair-service-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ab-repair-pricing-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ab-repair-service-card,
+.ab-repair-pricing-card,
+.ab-repair-testimonial-card {
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 20px;
+  background: var(--ab-color-panel);
+  overflow: hidden;
+}
+
+.ab-repair-service-card__content {
+  padding: 22px;
+}
+
+.ab-repair-service-card__media {
+  min-height: 140px;
+  font-size: 42px;
+}
+
+.ab-repair-service-card h3,
+.ab-repair-pricing-card h3 {
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.ab-repair-service-card p,
+.ab-repair-pricing-card p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ab-repair-pricing-card {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.ab-repair-pricing-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ab-repair-pricing-card__tag {
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.68);
+}
+
+.ab-repair-pricing-card__price {
+  font-size: clamp(38px, 3vw, 52px);
+  line-height: 1;
+  color: #111111;
+}
+
+.ab-repair-pricing-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ab-repair-pricing-card li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.ab-repair-pricing-card li::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.ab-repair-workshop-table-wrap {
+  overflow-x: auto;
+}
+
+.ab-repair-workshop-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.ab-repair-workshop-table td {
+  padding: 14px 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #111111;
+}
+
+.ab-repair-workshop-table
+  tbody
+  tr:not(.ab-repair-workshop-table__section):nth-child(even) {
+  background: rgba(17, 17, 17, 0.04);
+}
+
+.ab-repair-workshop-table td:last-child {
+  text-align: right;
+  color: rgba(17, 17, 17, 0.76);
+}
+
+.ab-repair-workshop-table__section td {
+  padding-top: 26px;
+  font-weight: 600;
+  background: transparent;
+}
+
+.ab-repair-testimonial-card {
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.ab-repair-stars {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #111111;
+}
+
+.ab-repair-testimonial-card p {
+  margin: 0 0 18px;
+}
+
+.ab-repair-testimonial-card__author {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.ab-repair-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.08);
+}
+
+.ab-repair-testimonial-card__author strong {
+  display: block;
+  font-size: 16px;
+  color: #111111;
+}
+
+.ab-repair-testimonial-card__author span {
+  display: block;
+  font-size: 14px;
+}
+
+.ab-repair-contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 520px;
+  gap: 32px;
+  align-items: start;
+}
+
+.ab-repair-site-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.ab-repair-site-card {
+  padding-left: 18px;
+  border-left: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.ab-repair-site-card h3 {
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.ab-repair-site-card p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ab-repair-contact-side {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-repair-contact-details {
+  display: grid;
+  gap: 14px;
+}
+
+.ab-repair-contact-item {
+  display: grid;
+  gap: 6px;
+}
+
+.ab-repair-contact-item strong {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #111111;
+}
+
+.ab-repair-contact-map {
+  min-height: 300px;
+}
+
+.ab-repair-contact-map__icon {
+  font-size: 72px;
+  line-height: 1;
+}
+
+@media (max-width: 1180px) {
+  .ab-repair-feature__grid,
+  .ab-repair-feature__grid--reverse,
+  .ab-repair-service-grid,
+  .ab-repair-pricing-grid,
+  .ab-repair-testimonial-grid,
+  .ab-repair-contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-repair-container {
+    width: min(calc(100% - 36px), 1320px);
+  }
+
+  .ab-repair-page,
+  .ab-repair-hero,
+  .ab-repair-feature,
+  .ab-repair-services,
+  .ab-repair-pricing,
+  .ab-repair-workshop,
+  .ab-repair-booking,
+  .ab-repair-testimonials,
+  .ab-repair-contact {
+    padding-bottom: 84px;
+  }
+
+  .ab-repair-hero,
+  .ab-repair-services,
+  .ab-repair-workshop,
+  .ab-repair-booking,
+  .ab-repair-contact {
+    padding-top: 56px;
+  }
+
+  .ab-repair-hero {
+    padding-top: 70px;
+  }
+
+  .ab-repair-hero__title,
+  .ab-repair-section-title,
+  .ab-repair-service-card h3,
+  .ab-repair-site-card h3,
+  .ab-repair-pricing-card h3 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .ab-repair-eyebrow,
+  .ab-repair-hero__text,
+  .ab-repair-section-text,
+  .ab-repair-list li,
+  .ab-repair-service-card p,
+  .ab-repair-testimonial-card p,
+  .ab-repair-testimonial-card__author span,
+  .ab-repair-site-card p,
+  .ab-repair-contact-item span,
+  .ab-repair-pricing-card p,
+  .ab-repair-pricing-card li,
+  .ab-repair-button,
+  .ab-repair-link {
+    font-size: 16px;
+  }
+
+  .ab-repair-visual-card {
+    min-height: 260px;
+  }
+
+  .ab-repair-visual-card__icon {
+    width: 88px;
+    height: 88px;
+  }
+
+  .ab-repair-service-card__content,
+  .ab-repair-pricing-card,
+  .ab-repair-testimonial-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .ab-repair-contact-map {
+    min-height: 220px;
+  }
+}

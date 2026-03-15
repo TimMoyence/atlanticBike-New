@@ -1,0 +1,450 @@
+.model-page {
+  background: var(--ab-color-page-bg);
+}
+
+.ab-admin-repair-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ab-admin-repair-container {
+  width: min(calc(100% - var(--ab-layout-inline)), var(--ab-layout-max-width));
+  margin: 0 auto;
+}
+
+.ab-admin-repair-hero {
+  padding: 88px 0 96px;
+}
+
+.ab-admin-repair-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ab-admin-repair-hero__eyebrow,
+.ab-admin-repair-section-heading__eyebrow,
+.ab-admin-repair-panel__eyebrow,
+.ab-admin-repair-form-block__step {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.ab-admin-repair-hero__title,
+.ab-admin-repair-section-heading__title,
+.ab-admin-repair-panel__title,
+.ab-admin-repair-form-block__title,
+.ab-admin-repair-flow-card__title {
+  margin: 0;
+  letter-spacing: -0.045em;
+  color: #111111;
+}
+
+.ab-admin-repair-hero__title {
+  max-width: 900px;
+  font-size: clamp(46px, 5.3vw, 74px);
+  line-height: 1.02;
+}
+
+.ab-admin-repair-hero__text,
+.ab-admin-repair-section-heading__text,
+.ab-admin-repair-panel__text,
+.ab-admin-repair-field__label,
+.ab-admin-repair-inline-list li,
+.ab-admin-repair-flow-card__text,
+.ab-admin-repair-summary-item__label {
+  color: rgba(17, 17, 17, 0.76);
+}
+
+.ab-admin-repair-hero__text {
+  max-width: 760px;
+  margin: 24px 0 0;
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.ab-admin-repair-hero__actions,
+.ab-admin-repair-step__actions,
+.ab-admin-repair-form__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ab-admin-repair-hero__actions {
+  margin-top: 28px;
+}
+
+.ab-admin-repair-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  color: #111111;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ab-admin-repair-button:hover,
+.ab-admin-repair-link:hover {
+  transform: translateY(-1px);
+}
+
+.ab-admin-repair-button--primary {
+  background: var(--ab-color-accent);
+}
+
+.ab-admin-repair-button--primary:hover {
+  background: var(--ab-color-accent);
+}
+
+.ab-admin-repair-button--secondary {
+  background: #e7e7e4;
+}
+
+.ab-admin-repair-button--secondary:hover {
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+.ab-admin-repair-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.ab-admin-repair-link:hover {
+  opacity: 0.78;
+}
+
+.ab-admin-repair-link::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.ab-admin-repair-flow,
+.ab-admin-repair-pec,
+.ab-admin-repair-report {
+  padding: 0 0 96px;
+}
+
+.ab-admin-repair-flow__header {
+  margin-bottom: 28px;
+}
+
+.ab-admin-repair-flow__steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ab-admin-repair-flow-card {
+  padding: 22px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 22px;
+  background: var(--ab-color-panel);
+}
+
+.ab-admin-repair-flow-card__index {
+  display: inline-flex;
+  margin-bottom: 14px;
+  font-size: 18px;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.ab-admin-repair-flow-card__title {
+  font-size: 28px;
+  line-height: 1.12;
+}
+
+.ab-admin-repair-flow-card__text {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.ab-admin-repair-pec__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+.ab-admin-repair-section-heading--split {
+  display: grid;
+  grid-template-columns: minmax(0, 720px) auto;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.ab-admin-repair-section-heading__title {
+  font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.06;
+}
+
+.ab-admin-repair-section-heading__text {
+  margin: 0;
+  max-width: 440px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.ab-admin-repair-form--pec {
+  display: grid;
+  gap: 22px;
+}
+
+.ab-admin-repair-form-block,
+.ab-admin-repair-panel {
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 22px;
+  background: var(--ab-color-panel);
+  padding: 22px;
+}
+
+.ab-admin-repair-form-block__header,
+.ab-admin-repair-panel__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.ab-admin-repair-form-block__title,
+.ab-admin-repair-panel__title {
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.08;
+}
+
+.ab-admin-repair-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--ab-color-accent);
+  font-size: 12px;
+  line-height: 1;
+  color: #111111;
+}
+
+.ab-admin-repair-form {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-admin-repair-form__grid {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-admin-repair-form__grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ab-admin-repair-form__grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ab-admin-repair-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ab-admin-repair-field__label {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.ab-admin-repair-field__input,
+.ab-admin-repair-field__textarea,
+.ab-admin-repair-field__select {
+  width: 100%;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 14px 16px;
+  font: inherit;
+  color: #111111;
+}
+
+.ab-admin-repair-field__input:focus,
+.ab-admin-repair-field__textarea:focus,
+.ab-admin-repair-field__select:focus {
+  outline: none;
+  border-color: rgba(148, 199, 132, 0.95);
+  box-shadow: 0 0 0 3px rgba(148, 199, 132, 0.14);
+}
+
+.ab-admin-repair-field__textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.ab-admin-repair-field__textarea::placeholder,
+.ab-admin-repair-field__input::placeholder {
+  color: rgba(17, 17, 17, 0.44);
+}
+
+.ab-admin-repair-form__actions--footer {
+  padding-top: 4px;
+}
+
+.ab-admin-repair-panel--sticky {
+  position: sticky;
+  top: 24px;
+}
+
+.ab-admin-repair-summary-list {
+  display: grid;
+  gap: 14px;
+}
+
+.ab-admin-repair-summary-item {
+  display: grid;
+  gap: 4px;
+}
+
+.ab-admin-repair-summary-item__label {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.ab-admin-repair-summary-item__value {
+  font-size: 16px;
+  line-height: 1.35;
+  color: #111111;
+}
+
+.ab-admin-repair-summary-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: rgba(17, 17, 17, 0.1);
+}
+
+.ab-admin-repair-inline-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.ab-admin-repair-inline-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ab-admin-repair-inline-list li::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.ab-admin-repair-panel--report {
+  max-width: 760px;
+}
+
+@media (max-width: 1100px) {
+  .ab-admin-repair-flow__steps,
+  .ab-admin-repair-pec__grid,
+  .ab-admin-repair-section-heading--split,
+  .ab-admin-repair-form__grid--two,
+  .ab-admin-repair-form__grid--three {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-admin-repair-form-block__header,
+  .ab-admin-repair-panel__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ab-admin-repair-panel--sticky {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-admin-repair-container {
+    width: min(calc(100% - 36px), var(--ab-layout-max-width));
+  }
+
+  .ab-admin-repair-hero {
+    padding: 70px 0 84px;
+  }
+
+  .ab-admin-repair-flow,
+  .ab-admin-repair-pec,
+  .ab-admin-repair-report {
+    padding-bottom: 84px;
+  }
+
+  .ab-admin-repair-hero__title,
+  .ab-admin-repair-section-heading__title,
+  .ab-admin-repair-form-block__title,
+  .ab-admin-repair-panel__title,
+  .ab-admin-repair-flow-card__title {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .ab-admin-repair-hero__text,
+  .ab-admin-repair-section-heading__text,
+  .ab-admin-repair-panel__text,
+  .ab-admin-repair-inline-list li,
+  .ab-admin-repair-flow-card__text {
+    font-size: 14px;
+  }
+
+  .ab-admin-repair-form-block,
+  .ab-admin-repair-panel,
+  .ab-admin-repair-flow-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+}

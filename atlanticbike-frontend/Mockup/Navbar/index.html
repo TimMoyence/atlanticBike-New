@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AtlanticBike | Navbar Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="navbar-page">
+    <header class="navbar-shell" data-navbar>
+      <input class="nav-state" type="checkbox" id="mega-menu-toggle" aria-hidden="true" />
+      <input class="mobile-nav-state" type="checkbox" id="mobile-menu-toggle" aria-hidden="true" />
+
+      <div class="navbar-row">
+        <a class="brand" href="../accueil/index.html" aria-label="AtlanticBike">
+          <img src="./design/Assets/logo atlantic 1.png" alt="AtlanticBike Rent & Repair" />
+        </a>
+
+        <nav class="primary-nav" aria-label="Navigation principale">
+          <a href="../accueil/index.html">Accueil</a>
+          <a href="../a-propos/index.html">A propos</a>
+          <a href="../reservation/index.html">Réservation</a>
+          <label class="plus-trigger" for="mega-menu-toggle" aria-controls="mega-menu">
+            <span>Plus</span>
+            <svg viewBox="0 0 12 8" aria-hidden="true">
+              <path d="M1 1.5 6 6.5 11 1.5" />
+            </svg>
+          </label>
+        </nav>
+
+        <label class="mobile-trigger" for="mobile-menu-toggle" aria-controls="mobile-menu"
+          aria-label="Ouvrir le menu mobile">
+          <img class="mobile-icon mobile-icon-burger" src="./design/Assets/burger-menu.svg" alt="" aria-hidden="true" />
+          <img class="mobile-icon mobile-icon-close" src="./design/Assets/close.svg" alt="" aria-hidden="true" />
+        </label>
+      </div>
+
+        <div class="mega-menu" id="mega-menu">
+        <div class="mega-primary">
+          <section class="mega-column">
+            <h2>Pages</h2>
+
+            <a class="menu-item" href="../accueil/index.html">
+              <img src="./design/Assets/explore.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Accueil</strong>
+                <small>Vue d'ensemble de l'expérience AtlanticBike</small>
+              </span>
+            </a>
+
+            <a class="menu-item" href="../a-propos/index.html">
+              <img src="./design/Assets/details.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>A propos</strong>
+                <small>Notre histoire, nos sites et nos témoignages</small>
+              </span>
+            </a>
+
+            <a class="menu-item" href="../reservation/index.html">
+              <img src="./design/Assets/two_wheeler.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Réservation</strong>
+                <small>Flow de réservation dynamique en 5 étapes</small>
+              </span>
+            </a>
+          </section>
+
+          <section class="mega-column">
+            <h2>Ressources</h2>
+
+            <a class="menu-item" href="../Cartes/index.html">
+              <img src="./design/Assets/directions.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Carte</strong>
+                <small>Itinéraires recommandés</small>
+              </span>
+            </a>
+
+            <a class="menu-item" href="../location-vélo/index.html#rental-pricing-title">
+              <img src="./design/Assets/gite.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Tarifs</strong>
+                <small>Nos forfaits de location</small>
+              </span>
+            </a>
+          </section>
+
+          <section class="mega-column">
+            <h2>Liens rapides</h2>
+
+            <a class="menu-item" href="../services/index.html">
+              <img src="./design/Assets/details.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Mentions</strong>
+                <small>Légales</small>
+              </span>
+            </a>
+
+            <a class="menu-item" href="../contact/index.html#contact-form-title">
+              <img src="./design/Assets/conditions.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Confidentialité</strong>
+                <small>Conditions</small>
+              </span>
+            </a>
+
+            <a class="menu-item" href="../Vélos/index.html#fleet-grid-title">
+              <img src="./design/Assets/accessible.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Accessibilité</strong>
+                <small>Plan du site</small>
+              </span>
+            </a>
+          </section>
+        </div>
+
+        <aside class="mega-secondary">
+          <h2>Liens supplémentaires</h2>
+          <a href="../contact/index.html#contact-form-title">Partenaires</a>
+        </aside>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-head">
+          <h2>Menu</h2>
+          <label class="mobile-close" for="mobile-menu-toggle" aria-label="Fermer le menu">
+            <img src="./design/Assets/close.svg" alt="" aria-hidden="true" />
+          </label>
+        </div>
+
+        <nav class="mobile-primary-nav" aria-label="Navigation mobile">
+          <a href="../accueil/index.html">Accueil</a>
+          <a href="../a-propos/index.html">A propos</a>
+          <a href="../reservation/index.html">Réservation</a>
+        </nav>
+
+        <div class="mobile-menu-groups">
+          <section class="mobile-group">
+            <h3>Pages</h3>
+            <a class="menu-item" href="../accueil/index.html">
+              <img src="./design/Assets/explore.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Accueil</strong>
+                <small>Découvrir l'univers AtlanticBike</small>
+              </span>
+            </a>
+            <a class="menu-item" href="../a-propos/index.html">
+              <img src="./design/Assets/details.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>A propos</strong>
+                <small>Notre histoire, nos sites et nos clients</small>
+              </span>
+            </a>
+            <a class="menu-item" href="../reservation/index.html">
+              <img src="./design/Assets/two_wheeler.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Réservation</strong>
+                <small>Flow de réservation dynamique en 5 étapes</small>
+              </span>
+            </a>
+          </section>
+
+          <section class="mobile-group">
+            <h3>Ressources</h3>
+            <a class="menu-item" href="../Cartes/index.html">
+              <img src="./design/Assets/directions.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Carte</strong>
+                <small>Itinéraires recommandés</small>
+              </span>
+            </a>
+            <a class="menu-item" href="../location-vélo/index.html#rental-pricing-title">
+              <img src="./design/Assets/gite.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Tarifs</strong>
+                <small>Nos forfaits de location</small>
+              </span>
+            </a>
+          </section>
+
+          <section class="mobile-group">
+            <h3>Liens rapides</h3>
+            <a class="menu-item" href="../services/index.html">
+              <img src="./design/Assets/details.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Mentions</strong>
+                <small>Légales</small>
+              </span>
+            </a>
+            <a class="menu-item" href="../contact/index.html#contact-form-title">
+              <img src="./design/Assets/conditions.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Confidentialité</strong>
+                <small>Conditions</small>
+              </span>
+            </a>
+            <a class="menu-item" href="../Vélos/index.html#fleet-grid-title">
+              <img src="./design/Assets/accessible.svg" alt="" aria-hidden="true" />
+              <span>
+                <strong>Accessibilité</strong>
+                <small>Plan du site</small>
+              </span>
+            </a>
+          </section>
+
+          <section class="mobile-group">
+            <h3>Liens supplémentaires</h3>
+            <a class="mobile-inline-link" href="../contact/index.html#contact-form-title">Partenaires</a>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <main class="mock-canvas" aria-hidden="true"></main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

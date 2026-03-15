@@ -1,0 +1,426 @@
+.model-page {
+  background: var(--ab-color-page-bg);
+}
+
+.ab-ebikes-container {
+  width: min(
+    calc(100% - (var(--ab-layout-inline) * 2)),
+    var(--ab-layout-max-width)
+  );
+  margin: 0 auto;
+}
+
+.ab-ebikes-page {
+  padding-bottom: 96px;
+}
+
+.ab-ebikes-hero,
+.ab-ebikes-models,
+.ab-ebikes-cta,
+.ab-ebikes-testimonials,
+.ab-ebikes-fleet {
+  padding: 0 0 96px;
+}
+
+.ab-ebikes-hero {
+  padding-top: 88px;
+}
+
+.ab-ebikes-testimonials {
+  background: var(--ab-color-page-bg);
+  padding-top: 72px;
+}
+
+.ab-ebikes-fleet {
+  background: #ffffff;
+  padding-top: 72px;
+}
+
+.ab-ebikes-hero__inner,
+.ab-ebikes-cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ab-ebikes-eyebrow {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.ab-ebikes-hero__title,
+.ab-ebikes-section-title,
+.ab-ebikes-model-row__content h3 {
+  margin: 0;
+  letter-spacing: -0.05em;
+  color: #111111;
+}
+
+.ab-ebikes-hero__title {
+  max-width: 760px;
+  font-size: clamp(48px, 5.2vw, 72px);
+  line-height: 1.02;
+}
+
+.ab-ebikes-hero__text,
+.ab-ebikes-section-text,
+.ab-ebikes-model-row__content p,
+.ab-ebikes-model-row__list li,
+.ab-ebikes-testimonial-card p,
+.ab-ebikes-testimonial-card__author span {
+  color: rgba(17, 17, 17, 0.76);
+}
+
+.ab-ebikes-hero__text,
+.ab-ebikes-section-text {
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.ab-ebikes-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ab-ebikes-actions--center {
+  justify-content: center;
+}
+
+.ab-ebikes-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #111111;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ab-ebikes-button:hover,
+.ab-ebikes-link:hover {
+  transform: translateY(-1px);
+}
+
+.ab-ebikes-button--primary {
+  background: var(--ab-color-accent);
+}
+
+.ab-ebikes-button--primary:hover {
+  background: var(--ab-color-accent);
+}
+
+.ab-ebikes-button--secondary {
+  background: #e7e7e4;
+}
+
+.ab-ebikes-button--secondary:hover {
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+.ab-ebikes-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ab-ebikes-link::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.ab-ebikes-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ab-ebikes-model-list {
+  display: grid;
+  gap: 46px;
+}
+
+.ab-ebikes-model-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 40px;
+  align-items: center;
+}
+
+.ab-ebikes-model-row--reverse {
+  grid-template-columns: 360px minmax(0, 1fr);
+}
+
+.ab-ebikes-model-row__content h3 {
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.08;
+  margin-bottom: 12px;
+}
+
+.ab-ebikes-model-row__content p {
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+.ab-ebikes-model-row__icon {
+  display: inline-flex;
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height: 1;
+  color: #111111;
+}
+
+.ab-ebikes-model-row__list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.ab-ebikes-model-row__list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.ab-ebikes-model-row__list li::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.ab-ebikes-model-row__media,
+.ab-ebikes-carousel__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #dcdcd8;
+  color: rgba(120, 120, 120, 0.52);
+}
+
+.ab-ebikes-model-row__media {
+  min-height: 280px;
+  font-size: 48px;
+}
+
+.ab-ebikes-section-heading--centered {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.ab-ebikes-section-title {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.08;
+}
+
+.ab-ebikes-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ab-ebikes-testimonial-card {
+  padding: 22px;
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.ab-ebikes-stars {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #111111;
+}
+
+.ab-ebikes-testimonial-card p {
+  margin: 0 0 18px;
+}
+
+.ab-ebikes-testimonial-card__author {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.ab-ebikes-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.08);
+}
+
+.ab-ebikes-testimonial-card__author strong {
+  display: block;
+  font-size: 16px;
+  color: #111111;
+}
+
+.ab-ebikes-testimonial-card__author span {
+  display: block;
+  font-size: 14px;
+}
+
+.ab-ebikes-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 40px;
+  gap: 12px;
+  align-items: center;
+}
+
+.ab-ebikes-carousel__track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  overflow: hidden;
+}
+
+.ab-ebikes-carousel__card {
+  min-height: 220px;
+  font-size: 42px;
+}
+
+.ab-ebikes-carousel__nav {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.08);
+  color: #111111;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ab-ebikes-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.ab-ebikes-carousel__dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.2);
+}
+
+.ab-ebikes-carousel__dots span.is-active {
+  background: #111111;
+}
+
+@media (max-width: 1180px) {
+  .ab-ebikes-model-row,
+  .ab-ebikes-model-row--reverse,
+  .ab-ebikes-testimonial-grid,
+  .ab-ebikes-carousel__track {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-ebikes-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-ebikes-carousel__nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-ebikes-container {
+    width: min(calc(100% - 36px), 1320px);
+  }
+
+  .ab-ebikes-page,
+  .ab-ebikes-hero,
+  .ab-ebikes-models,
+  .ab-ebikes-cta,
+  .ab-ebikes-testimonials,
+  .ab-ebikes-fleet {
+    padding-bottom: 84px;
+  }
+
+  .ab-ebikes-hero,
+  .ab-ebikes-testimonials,
+  .ab-ebikes-fleet {
+    padding-top: 56px;
+  }
+
+  .ab-ebikes-hero {
+    padding-top: 70px;
+  }
+
+  .ab-ebikes-hero__title,
+  .ab-ebikes-section-title,
+  .ab-ebikes-model-row__content h3 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .ab-ebikes-eyebrow,
+  .ab-ebikes-hero__text,
+  .ab-ebikes-section-text,
+  .ab-ebikes-model-row__content p,
+  .ab-ebikes-model-row__list li,
+  .ab-ebikes-testimonial-card p,
+  .ab-ebikes-testimonial-card__author span,
+  .ab-ebikes-button,
+  .ab-ebikes-link {
+    font-size: 16px;
+  }
+
+  .ab-ebikes-model-row {
+    gap: 22px;
+  }
+
+  .ab-ebikes-model-row__media,
+  .ab-ebikes-carousel__card {
+    min-height: 220px;
+  }
+
+  .ab-ebikes-testimonial-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+}

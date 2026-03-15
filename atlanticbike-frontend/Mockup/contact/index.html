@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AtlanticBike | Contact</title>
+  <meta name="description"
+    content="Contactez AtlanticBike pour réserver un vélo, obtenir un conseil sur votre parcours ou préparer une location à Carcans, Maubuisson et Lacanau." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/global.css" />
+  <link rel="stylesheet" href="../shared/components.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="ab-page-shell model-page">
+    <div data-navbar-root></div>
+
+    <main class="ab-page-main ab-contact-page">
+      <section class="ab-contact-hero" aria-labelledby="contact-hero-title">
+        <div class="ab-contact-container ab-contact-hero__inner">
+          <p class="ab-contact-eyebrow">Réservez</p>
+          <h1 id="contact-hero-title" class="ab-contact-hero__title">
+            Contactez AtlanticBike
+          </h1>
+          <p class="ab-contact-hero__text">
+            Nous sommes là pour répondre à vos questions sur nos services de location de vélos,
+            vous orienter vers le bon parcours et vous aider à préparer votre sortie.
+          </p>
+
+          <div class="ab-contact-actions ab-contact-actions--center">
+            <a class="ab-contact-button ab-contact-button--primary" href="../reservation/index.html#reservation-flow">Réserver</a>
+            <a class="ab-contact-button ab-contact-button--secondary" href="tel:+33556032233">Appeler</a>
+          </div>
+
+          <div class="ab-contact-trust">
+            <span class="ab-contact-trust__item">Réponse rapide</span>
+            <span class="ab-contact-trust__item">Basés à Carcans / Maubuisson</span>
+            <span class="ab-contact-trust__item">Réservation, parcours, groupes</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-support-title" class="ab-contact-main" aria-labelledby="contact-form-title">
+        <div class="ab-contact-container">
+          <div class="ab-contact-main__shell">
+            <div class="ab-contact-main__grid">
+              <aside class="ab-contact-info-card">
+                <div class="ab-contact-info-card__section">
+                  <p class="ab-contact-eyebrow">Contact</p>
+                  <h2 class="ab-contact-section-title">Formulaire de contact</h2>
+                  <p class="ab-contact-section-text">
+                    Remplissez le formulaire et nous vous répondrons rapidement.
+                  </p>
+                </div>
+
+                <div class="ab-contact-info-list">
+                  <div class="ab-contact-info-item">
+                    <span class="ab-contact-info-item__icon">✉</span>
+                    <div>
+                      <strong>Email</strong>
+                      <span>contact@atlanticbike.fr</span>
+                    </div>
+                  </div>
+
+                  <div class="ab-contact-info-item">
+                    <span class="ab-contact-info-item__icon">⌕</span>
+                    <div>
+                      <strong>Téléphone</strong>
+                      <span>+33 5 56 03 22 33</span>
+                    </div>
+                  </div>
+
+                  <div class="ab-contact-info-item">
+                    <span class="ab-contact-info-item__icon">⌖</span>
+                    <div>
+                      <strong>Adresse</strong>
+                      <span>7 rue des Vélos, 33121 Carcans, France</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ab-contact-info-card__section ab-contact-info-card__section--soft">
+                  <h3 class="ab-contact-info-card__title">Pourquoi nous écrire ?</h3>
+                  <ul class="ab-contact-bullet-list">
+                    <li>Réserver un vélo rapidement</li>
+                    <li>Choisir un parcours adapté</li>
+                    <li>Préparer une sortie en famille ou en groupe</li>
+                    <li>Obtenir une réponse locale et concrète</li>
+                  </ul>
+                </div>
+              </aside>
+
+              <article class="ab-contact-form-card">
+                <div class="ab-contact-form-card__header">
+                  <div>
+                    <p class="ab-contact-eyebrow">Votre demande</p>
+                    <h2 id="contact-form-title" class="ab-contact-section-title">
+                      Envoyez votre message
+                    </h2>
+                  </div>
+                  <span class="ab-contact-badge">Réponse sous 24h</span>
+                </div>
+
+                <form id="contactForm" class="ab-contact-form" novalidate aria-label="Formulaire de contact">
+                  <div class="ab-contact-form-group">
+                    <p class="ab-contact-form-group__title">Vos informations</p>
+
+                    <div class="ab-contact-form-grid ab-contact-form-grid--two">
+                      <label class="ab-contact-field">
+                        <span class="ab-contact-field__label">Prénom</span>
+                        <input id="firstName" type="text" placeholder="Votre prénom" />
+                        <span class="ab-contact-field__error" data-error-for="firstName"></span>
+                      </label>
+
+                      <label class="ab-contact-field">
+                        <span class="ab-contact-field__label">Nom de famille</span>
+                        <input id="lastName" type="text" placeholder="Votre nom" />
+                        <span class="ab-contact-field__error" data-error-for="lastName"></span>
+                      </label>
+                    </div>
+
+                    <div class="ab-contact-form-grid ab-contact-form-grid--two">
+                      <label class="ab-contact-field">
+                        <span class="ab-contact-field__label">Email</span>
+                        <input id="email" type="email" placeholder="nom@email.fr" />
+                        <span class="ab-contact-field__error" data-error-for="email"></span>
+                      </label>
+
+                      <label class="ab-contact-field">
+                        <span class="ab-contact-field__label">Numéro de téléphone</span>
+                        <input id="phone" type="text" placeholder="+33..." />
+                        <span class="ab-contact-field__error" data-error-for="phone"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="ab-contact-form-group">
+                    <p class="ab-contact-form-group__title">Votre demande</p>
+
+                    <label class="ab-contact-field">
+                      <span class="ab-contact-field__label">Motif de votre contact</span>
+                      <select id="contactReason">
+                        <option>Sélectionnez</option>
+                        <option>Réservation</option>
+                        <option>Conseil parcours</option>
+                        <option>Groupe / entreprise</option>
+                        <option>Partenariat</option>
+                        <option>Autre demande</option>
+                      </select>
+                    </label>
+
+                    <div class="ab-contact-profile">
+                      <span class="ab-contact-profile__label">Qui êtes-vous ?</span>
+                      <div class="ab-contact-profile__grid">
+                        <label class="ab-contact-chip">
+                          <input type="radio" name="profile" value="Touriste" checked />
+                          <span>Touriste</span>
+                        </label>
+                        <label class="ab-contact-chip">
+                          <input type="radio" name="profile" value="Résident local" />
+                          <span>Résident local</span>
+                        </label>
+                        <label class="ab-contact-chip">
+                          <input type="radio" name="profile" value="Groupe" />
+                          <span>Groupe</span>
+                        </label>
+                        <label class="ab-contact-chip">
+                          <input type="radio" name="profile" value="Entreprise" />
+                          <span>Entreprise</span>
+                        </label>
+                        <label class="ab-contact-chip">
+                          <input type="radio" name="profile" value="École" />
+                          <span>École</span>
+                        </label>
+                        <label class="ab-contact-chip">
+                          <input type="radio" name="profile" value="Autre" />
+                          <span>Autre</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ab-contact-form-group">
+                    <p class="ab-contact-form-group__title">Votre message</p>
+
+                    <label class="ab-contact-field">
+                      <span class="ab-contact-field__label">Message</span>
+                      <textarea id="message"
+                        placeholder="Décrivez votre demande, votre besoin ou votre projet de location."></textarea>
+                      <span class="ab-contact-field__error" data-error-for="message"></span>
+                    </label>
+                  </div>
+
+                  <div class="ab-contact-form__footer">
+                    <label class="ab-contact-check">
+                      <input type="checkbox" id="termsAccepted" />
+                      <span class="ab-contact-check__box"></span>
+                      <span class="ab-contact-check__label">J’accepte les conditions générales</span>
+                    </label>
+
+                    <div class="ab-contact-actions">
+                      <button class="ab-contact-button ab-contact-button--primary" type="submit">Envoyer</button>
+                      <a class="ab-contact-button ab-contact-button--secondary" href="tel:+33556032233">Appeler</a>
+                    </div>
+                  </div>
+                </form>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ab-contact-sites" aria-labelledby="contact-sites-title">
+        <div class="ab-contact-container">
+          <div class="ab-contact-sites__grid">
+            <div>
+              <p class="ab-contact-eyebrow">Découverte</p>
+              <h2 id="contact-sites-title" class="ab-contact-section-title">
+                Nos sites
+              </h2>
+              <p class="ab-contact-section-text">
+                Explorez nos points de rencontre dans la région et choisissez le site le plus pratique pour vous.
+              </p>
+
+              <div class="ab-contact-site-list">
+                <article class="ab-contact-site-card">
+                  <div class="ab-contact-site-card__header">
+                    <h3>Maubuisson</h3>
+                    <span class="ab-contact-site-card__badge">Site principal</span>
+                  </div>
+                  <p>Base principale au cœur des paysages de Carcans.</p>
+                  <div class="ab-contact-actions">
+                    <a class="ab-contact-link" href="../Cartes/index.html#map-contact-title">Voir carte</a>
+                    <a class="ab-contact-link" href="../reservation/index.html#reservation-flow">Réserver ici</a>
+                  </div>
+                </article>
+
+                <article class="ab-contact-site-card">
+                  <div class="ab-contact-site-card__header">
+                    <h3>Igesa Carcans</h3>
+                    <span class="ab-contact-site-card__badge ab-contact-site-card__badge--soft">Partenaire</span>
+                  </div>
+                  <p>Notre site partenaire pour des expériences de cyclisme uniques.</p>
+                  <div class="ab-contact-actions">
+                    <a class="ab-contact-link" href="../Cartes/index.html#map-contact-title">Voir carte</a>
+                    <a class="ab-contact-link" href="#contact-form-title">Nous contacter</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <aside class="ab-contact-map-card">
+              <div class="ab-contact-map-card__top">
+                <div>
+                  <p class="ab-contact-eyebrow">Accès</p>
+                  <h3 class="ab-contact-map-card__title">Retrouvez-nous facilement</h3>
+                </div>
+              </div>
+
+              <div class="ab-contact-map-card__info">
+                <div class="ab-contact-map-card__info-item">
+                  <strong>Email</strong>
+                  <span>contact@atlanticbike.fr</span>
+                </div>
+                <div class="ab-contact-map-card__info-item">
+                  <strong>Téléphone</strong>
+                  <span>+33 5 56 03 22 33</span>
+                </div>
+              </div>
+
+              <div class="ab-contact-map-card__media" aria-hidden="true">
+                <span class="ab-contact-map-card__icon">⌖</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="ab-contact-cta" aria-labelledby="contact-cta-title">
+        <div class="ab-contact-container ab-contact-cta__inner">
+          <h2 id="contact-cta-title" class="ab-contact-section-title">
+            Prêt à réserver votre vélo ?
+          </h2>
+          <p class="ab-contact-section-text">
+            Commencez votre aventure à vélo dès maintenant avec AtlanticBike.
+          </p>
+          <div class="ab-contact-actions ab-contact-actions--center">
+            <a class="ab-contact-button ab-contact-button--primary" href="../reservation/index.html#reservation-flow">Réserver</a>
+            <a class="ab-contact-button ab-contact-button--secondary" href="#contact-form-title">Contactez-nous</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer-root></div>
+  </div>
+
+  <script src="../shared/global.js"></script>
+  <script src="../shared/components.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

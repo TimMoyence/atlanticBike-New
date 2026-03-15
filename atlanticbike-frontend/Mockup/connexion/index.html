@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AtlanticBike | Connexion admin</title>
+  <meta name="description"
+    content="Connexion à l’espace d’administration AtlanticBike pour gérer la flotte, les réservations, les réparations et les contenus du site." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/global.css" />
+  <link rel="stylesheet" href="../shared/components.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="ab-page-shell model-page">
+    <div data-navbar-root></div>
+
+    <main class="ab-page-main ab-admin-login-page">
+      <section class="ab-admin-login-hero" aria-labelledby="admin-login-hero-title">
+        <div class="ab-admin-login-container ab-admin-login-hero__inner">
+          <p class="ab-admin-login-eyebrow">Back-office sécurisé</p>
+          <h1 id="admin-login-hero-title" class="ab-admin-login-hero__title">
+            Connexion à l’espace d’administration
+          </h1>
+          <p class="ab-admin-login-hero__text">
+            Accédez au back-office AtlanticBike pour piloter les locations, la flotte de vélos,
+            les réparations et les contenus du site.
+          </p>
+        </div>
+      </section>
+
+      <section class="ab-admin-login-auth" aria-labelledby="admin-login-form-title">
+        <div class="ab-admin-login-container">
+          <div class="ab-admin-login-auth__grid">
+            <article class="ab-admin-login-card ab-admin-login-card--main">
+              <div class="ab-admin-login-card__header">
+                <div>
+                  <p class="ab-admin-login-eyebrow">Authentification</p>
+                  <h2 id="admin-login-form-title" class="ab-admin-login-card__title">
+                    Se connecter
+                  </h2>
+                </div>
+                <span class="ab-admin-login-badge">Admin</span>
+              </div>
+
+              <form id="adminLoginForm" class="ab-admin-login-form" novalidate aria-label="Connexion administrateur">
+                <label class="ab-admin-login-field">
+                  <span class="ab-admin-login-field__label">Adresse email</span>
+                  <input id="adminLoginEmail" type="email" placeholder="admin@atlanticbike.fr" autocomplete="email" />
+                  <span class="ab-admin-login-field__error" data-error-for="adminLoginEmail"></span>
+                </label>
+
+                <label class="ab-admin-login-field">
+                  <span class="ab-admin-login-field__label">Mot de passe</span>
+                  <div class="ab-admin-login-password-wrap">
+                    <input id="adminLoginPassword" type="password" placeholder="Votre mot de passe"
+                      autocomplete="current-password" />
+                    <button id="adminTogglePassword" class="ab-admin-login-password-toggle" type="button"
+                      aria-label="Afficher ou masquer le mot de passe">
+                      Voir
+                    </button>
+                  </div>
+                  <span class="ab-admin-login-field__error" data-error-for="adminLoginPassword"></span>
+                </label>
+
+                <div class="ab-admin-login-form__meta">
+                  <label class="ab-admin-login-check">
+                    <input type="checkbox" id="adminRememberMe" />
+                    <span class="ab-admin-login-check__box"></span>
+                    <span class="ab-admin-login-check__label">Rester connecté</span>
+                  </label>
+
+                  <a class="ab-admin-login-link" href="../contact/index.html#contact-support-title">Mot de passe oublié ?</a>
+                </div>
+
+                <div class="ab-admin-login-actions">
+                  <button class="ab-admin-login-button ab-admin-login-button--primary" type="submit">
+                    Connexion admin
+                  </button>
+                </div>
+
+                <p class="ab-admin-login-legal">
+                  Cet accès est réservé aux administrateurs autorisés. Toute connexion donne accès
+                  aux outils de gestion et d’administration AtlanticBike.
+                </p>
+              </form>
+            </article>
+
+            <aside class="ab-admin-login-side">
+              <article class="ab-admin-login-card">
+                <div class="ab-admin-login-card__header">
+                  <div>
+                    <p class="ab-admin-login-eyebrow">Accès réservé</p>
+                    <h2 class="ab-admin-login-card__title">Un seul point d’entrée pour piloter le site</h2>
+                  </div>
+                </div>
+
+                <p class="ab-admin-login-card__text">
+                  Cet espace centralise l’ensemble des opérations de gestion et du back-office.
+                </p>
+
+                <ul class="ab-admin-login-list">
+                  <li>Gestion des réservations</li>
+                  <li>Gestion de la flotte de vélos</li>
+                  <li>Suivi atelier et réparations</li>
+                  <li>Mise à jour des contenus et pages</li>
+                </ul>
+              </article>
+
+              <article class="ab-admin-login-card">
+                <div class="ab-admin-login-card__header">
+                  <div>
+                    <p class="ab-admin-login-eyebrow">Support</p>
+                    <h2 class="ab-admin-login-card__title">Problème d’accès ?</h2>
+                  </div>
+                </div>
+
+                <div class="ab-admin-login-help">
+                  <div class="ab-admin-login-help__item">
+                    <strong>Email</strong>
+                    <span>contact@atlanticbike.fr</span>
+                  </div>
+                  <div class="ab-admin-login-help__item">
+                    <strong>Téléphone</strong>
+                    <span>+33 5 56 03 22 33</span>
+                  </div>
+                </div>
+
+                <div class="ab-admin-login-actions">
+                  <a class="ab-admin-login-button ab-admin-login-button--secondary" href="../contact/index.html#contact-support-title">
+                    Contacter le support
+                  </a>
+                </div>
+              </article>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer-root></div>
+  </div>
+
+  <script src="../shared/global.js"></script>
+  <script src="../shared/components.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

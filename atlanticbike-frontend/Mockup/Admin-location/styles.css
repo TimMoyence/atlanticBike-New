@@ -1,0 +1,640 @@
+.model-page {
+  background: var(--ab-color-page-bg);
+}
+
+.ab-admin-rental-container {
+  width: min(
+    calc(100% - (var(--ab-layout-inline) * 2)),
+    var(--ab-layout-max-width)
+  );
+  margin: 0 auto;
+}
+
+.ab-admin-rental-hero,
+.ab-admin-rental-kpis,
+.ab-admin-rental-dashboard,
+.ab-admin-rental-fleet-table,
+.ab-admin-rental-bookings,
+.ab-admin-rental-add,
+.ab-admin-rental-recap {
+  padding: 0 0 96px;
+}
+
+.ab-admin-rental-hero {
+  padding-top: 88px;
+}
+
+.ab-admin-rental-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ab-admin-rental-hero__eyebrow,
+.ab-admin-rental-section-heading__eyebrow,
+.ab-admin-rental-panel__eyebrow,
+.ab-admin-rental-kpi-card__label,
+.ab-admin-rental-field__label {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(17, 17, 17, 0.66);
+}
+
+.ab-admin-rental-hero__title,
+.ab-admin-rental-section-heading__title,
+.ab-admin-rental-panel__title,
+.ab-admin-rental-lane__title,
+.ab-admin-rental-booking-card__client {
+  margin: 0;
+  letter-spacing: -0.05em;
+  color: #111111;
+}
+
+.ab-admin-rental-hero__title {
+  max-width: 920px;
+  font-size: clamp(46px, 5.2vw, 76px);
+  line-height: 1.02;
+}
+
+.ab-admin-rental-hero__text,
+.ab-admin-rental-section-heading__text,
+.ab-admin-rental-panel__text,
+.ab-admin-rental-booking-card__meta,
+.ab-admin-rental-booking-card__list li,
+.ab-admin-rental-kpi-card__meta,
+.ab-admin-rental-check__label,
+.ab-admin-rental-lane__text,
+.ab-admin-rental-table__main-cell span {
+  color: rgba(17, 17, 17, 0.76);
+}
+
+.ab-admin-rental-hero__text {
+  max-width: 760px;
+  margin: 22px 0 0;
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.ab-admin-rental-hero__actions,
+.ab-admin-rental-form__actions,
+.ab-admin-rental-booking-card__actions,
+.ab-admin-rental-table__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ab-admin-rental-hero__actions {
+  margin-top: 28px;
+}
+
+.ab-admin-rental-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  color: #111111;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+  cursor: pointer;
+}
+
+.ab-admin-rental-button:hover,
+.ab-admin-rental-link:hover {
+  transform: translateY(-1px);
+}
+
+.ab-admin-rental-button--primary {
+  background: var(--ab-color-accent);
+}
+
+.ab-admin-rental-button--primary:hover {
+  background: var(--ab-color-accent);
+}
+
+.ab-admin-rental-button--secondary {
+  background: #e7e7e4;
+}
+
+.ab-admin-rental-button--secondary:hover {
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+.ab-admin-rental-button--ghost {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(17, 17, 17, 0.08);
+}
+
+.ab-admin-rental-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.ab-admin-rental-link:hover {
+  opacity: 0.78;
+}
+
+.ab-admin-rental-link::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.ab-admin-rental-kpis__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ab-admin-rental-kpi-card,
+.ab-admin-rental-panel,
+.ab-admin-rental-booking-card,
+.ab-admin-rental-lane {
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 22px;
+  background: var(--ab-color-panel);
+}
+
+.ab-admin-rental-kpi-card {
+  padding: 22px;
+}
+
+.ab-admin-rental-kpi-card__value {
+  display: block;
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.05;
+  color: #111111;
+}
+
+.ab-admin-rental-kpi-card__meta {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.ab-admin-rental-dashboard__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.ab-admin-rental-section-heading--split {
+  display: grid;
+  grid-template-columns: minmax(0, 720px) auto;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.ab-admin-rental-section-heading--centered {
+  max-width: 780px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.ab-admin-rental-section-heading__title {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.06;
+}
+
+.ab-admin-rental-section-heading__text {
+  margin: 0;
+  max-width: 430px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.ab-admin-rental-main__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.ab-admin-rental-panel {
+  padding: 22px;
+}
+
+.ab-admin-rental-panel--wide {
+  grid-column: 1 / -1;
+}
+
+.ab-admin-rental-panel--sticky {
+  position: sticky;
+  top: 24px;
+}
+
+.ab-admin-rental-panel__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.ab-admin-rental-panel__title {
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.1;
+}
+
+.ab-admin-rental-panel__text {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.ab-admin-rental-badge,
+.ab-admin-rental-pill,
+.ab-admin-rental-state-badge,
+.ab-admin-rental-lane__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.ab-admin-rental-badge {
+  background: var(--ab-color-accent);
+  color: #111111;
+}
+
+.ab-admin-rental-pill,
+.ab-admin-rental-state-badge,
+.ab-admin-rental-lane__count {
+  background: rgba(17, 17, 17, 0.06);
+  color: #111111;
+}
+
+.ab-admin-rental-pill.is-disponible,
+.ab-admin-rental-state-badge--success {
+  background: #cfe8c7;
+}
+
+.ab-admin-rental-pill.is-location,
+.ab-admin-rental-pill.is-encours {
+  background: #dbe6f7;
+}
+
+.ab-admin-rental-pill.is-controle,
+.ab-admin-rental-pill.is-retour,
+.ab-admin-rental-state-badge--danger {
+  background: #f2d2d2;
+}
+
+.ab-admin-rental-pill.is-prepare,
+.ab-admin-rental-pill.is-preparation,
+.ab-admin-rental-state-badge--info {
+  background: #e8dff7;
+}
+
+.ab-admin-rental-pill.is-occasion,
+.ab-admin-rental-pill.is-validation,
+.ab-admin-rental-state-badge--warning {
+  background: #f1e4b7;
+}
+
+.ab-admin-rental-form {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-admin-rental-form__grid {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-admin-rental-form__grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ab-admin-rental-form__grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ab-admin-rental-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ab-admin-rental-field__label {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.ab-admin-rental-field__input,
+.ab-admin-rental-field__select {
+  width: 100%;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 14px 16px;
+  font: inherit;
+  color: #111111;
+}
+
+.ab-admin-rental-field__input:focus,
+.ab-admin-rental-field__select:focus {
+  outline: none;
+  border-color: rgba(148, 199, 132, 0.95);
+  box-shadow: 0 0 0 3px rgba(148, 199, 132, 0.14);
+}
+
+.ab-admin-rental-quick-statuses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.ab-admin-rental-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ab-admin-rental-check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ab-admin-rental-check__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  background: #ffffff;
+}
+
+.ab-admin-rental-check input:checked + .ab-admin-rental-check__dot {
+  background: var(--ab-color-accent);
+  border-color: #93c77d;
+}
+
+.ab-admin-rental-check__label {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ab-admin-rental-visual-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  border-radius: 18px;
+  background: #dcdcd8;
+  color: rgba(120, 120, 120, 0.52);
+  margin: 18px 0 22px;
+}
+
+.ab-admin-rental-visual-card__icon {
+  display: inline-flex;
+  width: 104px;
+  height: 104px;
+}
+
+.ab-admin-rental-visual-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ab-admin-rental-table-wrap {
+  overflow-x: auto;
+}
+
+.ab-admin-rental-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.ab-admin-rental-table th,
+.ab-admin-rental-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.ab-admin-rental-table thead th {
+  border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+  color: #111111;
+}
+
+.ab-admin-rental-table tbody tr:nth-child(odd) {
+  background: rgba(17, 17, 17, 0.04);
+}
+
+.ab-admin-rental-table__main-cell {
+  display: grid;
+  gap: 4px;
+}
+
+.ab-admin-rental-table__main-cell strong {
+  color: #111111;
+}
+
+.ab-admin-rental-lanes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ab-admin-rental-lane {
+  padding: 18px;
+}
+
+.ab-admin-rental-lane__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.ab-admin-rental-lane__title {
+  font-size: 24px;
+  line-height: 1.12;
+}
+
+.ab-admin-rental-lane__text {
+  margin: 8px 0 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.ab-admin-rental-lane__cards {
+  display: grid;
+  gap: 16px;
+}
+
+.ab-admin-rental-booking-card {
+  padding: 18px;
+}
+
+.ab-admin-rental-booking-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.ab-admin-rental-booking-card__client {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.ab-admin-rental-booking-card__meta {
+  margin: 6px 0 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.ab-admin-rental-booking-card__infos {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.ab-admin-rental-booking-card__infos div {
+  display: grid;
+  gap: 4px;
+}
+
+.ab-admin-rental-booking-card__infos span {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(17, 17, 17, 0.58);
+}
+
+.ab-admin-rental-booking-card__infos strong {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #111111;
+}
+
+.ab-admin-rental-add__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 24px;
+  align-items: center;
+}
+
+.ab-admin-rental-recap__filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 280px));
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 1220px) {
+  .ab-admin-rental-kpis__grid,
+  .ab-admin-rental-lanes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ab-admin-rental-dashboard__grid,
+  .ab-admin-rental-main__grid,
+  .ab-admin-rental-add__grid,
+  .ab-admin-rental-section-heading--split,
+  .ab-admin-rental-form__grid--two,
+  .ab-admin-rental-form__grid--three {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-admin-rental-panel--sticky {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-admin-rental-container {
+    width: min(calc(100% - 36px), 1320px);
+  }
+
+  .ab-admin-rental-hero {
+    padding-top: 70px;
+  }
+
+  .ab-admin-rental-hero,
+  .ab-admin-rental-kpis,
+  .ab-admin-rental-dashboard,
+  .ab-admin-rental-fleet-table,
+  .ab-admin-rental-bookings,
+  .ab-admin-rental-add,
+  .ab-admin-rental-recap {
+    padding-bottom: 84px;
+  }
+
+  .ab-admin-rental-kpis__grid,
+  .ab-admin-rental-lanes,
+  .ab-admin-rental-recap__filters {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-admin-rental-hero__title,
+  .ab-admin-rental-section-heading__title,
+  .ab-admin-rental-panel__title,
+  .ab-admin-rental-lane__title {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .ab-admin-rental-hero__text,
+  .ab-admin-rental-section-heading__text,
+  .ab-admin-rental-panel__text,
+  .ab-admin-rental-booking-card__meta,
+  .ab-admin-rental-booking-card__infos strong {
+    font-size: 14px;
+  }
+
+  .ab-admin-rental-kpi-card,
+  .ab-admin-rental-panel,
+  .ab-admin-rental-booking-card,
+  .ab-admin-rental-lane {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .ab-admin-rental-visual-card {
+    min-height: 220px;
+  }
+
+  .ab-admin-rental-visual-card__icon {
+    width: 88px;
+    height: 88px;
+  }
+}

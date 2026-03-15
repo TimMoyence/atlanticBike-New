@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AtlanticBike | Ajout vélo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/global.css" />
+  <link rel="stylesheet" href="../shared/components.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="ab-page-shell model-page">
+    <div data-navbar-root></div>
+
+    <main class="ab-page-main ab-admin-bike-page">
+      <section class="ab-admin-bike-hero" aria-labelledby="admin-bike-hero-title">
+        <div class="ab-admin-bike-container ab-admin-bike-hero__inner">
+          <p class="ab-admin-bike-eyebrow">Admin flotte</p>
+          <h1 id="admin-bike-hero-title" class="ab-admin-bike-hero__title">
+            Nouveau vélo dans votre flotte
+          </h1>
+          <p class="ab-admin-bike-hero__text">
+            Créez une fiche vélo, gérez les unités physiques par numéro de série,
+            mettez à jour les photos, les prix et basculez un vélo en occasion.
+          </p>
+        </div>
+      </section>
+
+      <section class="ab-admin-bike-section" aria-labelledby="bike-create-title">
+        <div class="ab-admin-bike-container">
+          <div class="ab-admin-bike-section-heading ab-admin-bike-section-heading--split">
+            <div>
+              <p class="ab-admin-bike-eyebrow">Création</p>
+              <h2 id="bike-create-title" class="ab-admin-bike-section-title">
+                Créer une fiche vélo
+              </h2>
+            </div>
+            <p class="ab-admin-bike-section-text">
+              Une fiche représente un modèle de vélo. Vous pourrez ensuite y rattacher plusieurs unités
+              physiques avec des numéros de série différents.
+            </p>
+          </div>
+
+          <div class="ab-admin-bike-layout">
+            <article class="ab-admin-bike-card ab-admin-bike-card--main">
+              <form id="bikeCreateForm" class="ab-admin-bike-form" aria-label="Créer une fiche vélo">
+                <div class="ab-admin-bike-form-grid ab-admin-bike-form-grid--two">
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Marque</span>
+                    <input id="bikeBrand" type="text" placeholder="Ex : Riverside" />
+                  </label>
+
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Nom du vélo</span>
+                    <input id="bikeName" type="text" placeholder="Ex : Touring 500" />
+                  </label>
+                </div>
+
+                <div class="ab-admin-bike-form-grid ab-admin-bike-form-grid--three">
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Catégorie</span>
+                    <select id="bikeCategory">
+                      <option>VTC</option>
+                      <option>VAE</option>
+                      <option>Ville</option>
+                      <option>Enfant</option>
+                      <option>Cargo</option>
+                    </select>
+                  </label>
+
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Taille cadre</span>
+                    <select id="bikeSize">
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                    </select>
+                  </label>
+
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Prix journée</span>
+                    <input id="bikeDayPrice" type="text" placeholder="29€" />
+                  </label>
+                </div>
+
+                <label class="ab-admin-bike-field">
+                  <span class="ab-admin-bike-field__label">Description</span>
+                  <textarea id="bikeDescription"
+                    placeholder="Décrivez le vélo, son usage, son positionnement et ses points forts."></textarea>
+                </label>
+
+                <div class="ab-admin-bike-form-grid ab-admin-bike-form-grid--two">
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Photo principale</span>
+                    <input id="bikeMainImage" type="file" />
+                  </label>
+
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Photos secondaires</span>
+                    <input id="bikeGalleryImages" type="file" multiple />
+                  </label>
+                </div>
+
+                <div class="ab-admin-bike-form-grid ab-admin-bike-form-grid--two">
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Stock initial</span>
+                    <input id="bikeInitialStock" type="text" placeholder="3" />
+                  </label>
+
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Tag principal</span>
+                    <select id="bikePrimaryTag">
+                      <option>location</option>
+                      <option>atelier</option>
+                      <option>occasion</option>
+                      <option>retiré</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="ab-admin-bike-actions">
+                  <button class="ab-admin-bike-button ab-admin-bike-button--secondary" type="button">Annuler</button>
+                  <button class="ab-admin-bike-button ab-admin-bike-button--primary" type="submit">Créer la
+                    fiche</button>
+                </div>
+              </form>
+            </article>
+
+            <aside class="ab-admin-bike-card ab-admin-bike-card--side">
+              <div class="ab-admin-bike-card__header">
+                <p class="ab-admin-bike-eyebrow">Résumé live</p>
+                <h3 class="ab-admin-bike-card__title">Fiche modèle</h3>
+              </div>
+
+              <div class="ab-admin-bike-summary-list">
+                <div class="ab-admin-bike-summary-item">
+                  <span class="ab-admin-bike-summary-item__label">Marque</span>
+                  <strong id="summaryBrand">Riverside</strong>
+                </div>
+                <div class="ab-admin-bike-summary-item">
+                  <span class="ab-admin-bike-summary-item__label">Nom</span>
+                  <strong id="summaryName">Touring 500</strong>
+                </div>
+                <div class="ab-admin-bike-summary-item">
+                  <span class="ab-admin-bike-summary-item__label">Catégorie</span>
+                  <strong id="summaryCategory">VTC</strong>
+                </div>
+                <div class="ab-admin-bike-summary-item">
+                  <span class="ab-admin-bike-summary-item__label">Prix journée</span>
+                  <strong id="summaryPrice">29€</strong>
+                </div>
+                <div class="ab-admin-bike-summary-item">
+                  <span class="ab-admin-bike-summary-item__label">Stock initial</span>
+                  <strong id="summaryStock">3</strong>
+                </div>
+                <div class="ab-admin-bike-summary-item">
+                  <span class="ab-admin-bike-summary-item__label">Tag</span>
+                  <strong id="summaryTag">location</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="ab-admin-bike-section" aria-labelledby="bike-units-title">
+        <div class="ab-admin-bike-container">
+          <div class="ab-admin-bike-section-heading ab-admin-bike-section-heading--split">
+            <div>
+              <p class="ab-admin-bike-eyebrow">Unités</p>
+              <h2 id="bike-units-title" class="ab-admin-bike-section-title">
+                Gérer le stock et les numéros de série
+              </h2>
+            </div>
+            <p class="ab-admin-bike-section-text">
+              Une fiche vélo peut contenir plusieurs unités physiques. Chaque unité possède son numéro
+              de série, son état et sa destination.
+            </p>
+          </div>
+
+          <div class="ab-admin-bike-layout">
+            <article class="ab-admin-bike-card ab-admin-bike-card--main">
+              <form class="ab-admin-bike-form" aria-label="Ajouter une unité vélo">
+                <div class="ab-admin-bike-form-grid ab-admin-bike-form-grid--three">
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Fiche vélo liée</span>
+                    <select>
+                      <option>Riverside Touring 500</option>
+                      <option>Cube Touring Hybrid</option>
+                      <option>Elops Ville</option>
+                    </select>
+                  </label>
+
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Numéro de série</span>
+                    <input type="text" placeholder="ATL-2026-0001" />
+                  </label>
+
+                  <label class="ab-admin-bike-field">
+                    <span class="ab-admin-bike-field__label">Statut unité</span>
+                    <select>
+                      <option>location</option>
+                      <option>atelier</option>
+                      <option>occasion</option>
+                      <option>retiré</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="ab-admin-bike-actions">
+                  <button class="ab-admin-bike-button ab-admin-bike-button--secondary"
+                    type="button">Réinitialiser</button>
+                  <button class="ab-admin-bike-button ab-admin-bike-button--primary" type="submit">Ajouter
+                    l’unité</button>
+                </div>
+              </form>
+
+              <div class="ab-admin-bike-table-wrap">
+                <table class="ab-admin-bike-table">
+                  <thead>
+                    <tr>
+                      <th>Modèle</th>
+                      <th>N° série</th>
+                      <th>Statut</th>
+                      <th>Localisation</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Riverside Touring 500</td>
+                      <td>ATL-2026-0001</td>
+                      <td><span class="ab-admin-bike-pill is-location">location</span></td>
+                      <td>Magasin</td>
+                      <td><button class="ab-admin-bike-button ab-admin-bike-button--ghost" type="button">Éditer</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Riverside Touring 500</td>
+                      <td>ATL-2026-0002</td>
+                      <td><span class="ab-admin-bike-pill is-atelier">atelier</span></td>
+                      <td>Atelier</td>
+                      <td><button class="ab-admin-bike-button ab-admin-bike-button--ghost" type="button">Éditer</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Riverside Touring 500</td>
+                      <td>ATL-2026-0003</td>
+                      <td><span class="ab-admin-bike-pill is-occasion">occasion</span></td>
+                      <td>Showroom</td>
+                      <td><button class="ab-admin-bike-button ab-admin-bike-button--ghost" type="button">Éditer</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <aside class="ab-admin-bike-card ab-admin-bike-card--side">
+              <div class="ab-admin-bike-card__header">
+                <p class="ab-admin-bike-eyebrow">Stock</p>
+                <h3 class="ab-admin-bike-card__title">Vue rapide</h3>
+              </div>
+
+              <div class="ab-admin-bike-kpi-list">
+                <div class="ab-admin-bike-kpi">
+                  <span>Total unités</span>
+                  <strong>3</strong>
+                </div>
+                <div class="ab-admin-bike-kpi">
+                  <span>Disponibles</span>
+                  <strong>1</strong>
+                </div>
+                <div class="ab-admin-bike-kpi">
+                  <span>Atelier</span>
+                  <strong>1</strong>
+                </div>
+                <div class="ab-admin-bike-kpi">
+                  <span>Occasion</span>
+                  <strong>1</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="ab-admin-bike-section" aria-labelledby="bike-update-title">
+        <div class="ab-admin-bike-container">
+          <div class="ab-admin-bike-section-heading ab-admin-bike-section-heading--split">
+            <div>
+              <p class="ab-admin-bike-eyebrow">Mise à jour</p>
+              <h2 id="bike-update-title" class="ab-admin-bike-section-title">
+                Modifier une fiche vélo existante
+              </h2>
+            </div>
+            <p class="ab-admin-bike-section-text">
+              Mettez à jour le nom, la catégorie, la description, le prix et les photos sans recréer
+              toute la fiche.
+            </p>
+          </div>
+
+          <article class="ab-admin-bike-card">
+            <form class="ab-admin-bike-form" aria-label="Modifier une fiche vélo">
+              <div class="ab-admin-bike-form-grid ab-admin-bike-form-grid--three">
+                <label class="ab-admin-bike-field">
+                  <span class="ab-admin-bike-field__label">Fiche à modifier</span>
+                  <select>
+                    <option>Riverside Touring 500</option>
+                    <option>Cube Touring Hybrid</option>
+                    <option>Elops Ville</option>
+                  </select>
+                </label>
+
+                <label class="ab-admin-bike-field">
+                  <span class="ab-admin-bike-field__label">Nom</span>
+                  <input type="text" placeholder="Riverside Touring 500" />
+                </label>
+
+                <label class="ab-admin-bike-field">
+                  <span class="ab-admin-bike-field__label">Catégorie</span>
+                  <select>
+                    <option>VTC</option>
+                    <option>VAE</option>
+                    <option>Ville</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="ab-admin-bike-form-grid ab-admin-bike-form-grid--two">
+                <label class="ab-admin-bike-field">
+                  <span class="ab-admin-bike-field__label">Prix journée</span>
+                  <input type="text" placeholder="29€" />
+                </label>
+
+                <label class="ab-admin-bike-field">
+                  <span class="ab-admin-bike-field__label">Changer la photo principale</span>
+                  <input type="file" />
+                </label>
+              </div>
+
+              <label class="ab-admin-bike-field">
+                <span class="ab-admin-bike-field__label">Description</span>
+                <textarea placeholder="Décrivez la fiche à jour du vélo."></textarea>
+              </label>
+
+              <div class="ab-admin-bike-actions">
+                <button class="ab-admin-bike-button ab-admin-bike-button--secondary" type="button">Annuler</button>
+                <button class="ab-admin-bike-button ab-admin-bike-button--primary" type="submit">Mettre à jour</button>
+              </div>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="ab-admin-bike-section ab-admin-bike-section--teaser" aria-labelledby="bike-booking-teaser-title">
+        <div class="ab-admin-bike-container">
+          <div class="ab-admin-bike-section-heading ab-admin-bike-section-heading--centered">
+            <p class="ab-admin-bike-eyebrow">Clin d’œil</p>
+            <h2 id="bike-booking-teaser-title" class="ab-admin-bike-section-title">
+              Validez vos réservations en express
+            </h2>
+            <p class="ab-admin-bike-section-text">
+              Cette page reste centrée sur la flotte, mais vous pouvez aussi traiter rapidement
+              quelques réservations ici avant d’ouvrir la gestion complète.
+            </p>
+          </div>
+
+          <div class="ab-admin-bike-booking-grid">
+            <article class="ab-admin-bike-booking-card">
+              <div class="ab-admin-bike-booking-card__top">
+                <div>
+                  <p class="ab-admin-bike-booking-card__client">Marie Dupont</p>
+                  <h3 class="ab-admin-bike-booking-card__price">58€</h3>
+                </div>
+                <span class="ab-admin-bike-booking-card__icon">1</span>
+              </div>
+
+              <div class="ab-admin-bike-booking-card__meta">
+                <span>Vélo : VTC Riverside 500</span>
+                <span>Mail : marie@email.fr</span>
+              </div>
+
+              <ul class="ab-admin-bike-booking-card__list">
+                <li>Début : 14/07 • 09:00</li>
+                <li>Fin : 16/07 • 18:00</li>
+                <li>Téléphone : 06 00 00 00 00</li>
+              </ul>
+
+              <div class="ab-admin-bike-actions">
+                <button class="ab-admin-bike-button ab-admin-bike-button--primary" type="button">Confirmer</button>
+                <button class="ab-admin-bike-button ab-admin-bike-button--secondary" type="button">Annuler</button>
+              </div>
+            </article>
+
+            <article class="ab-admin-bike-booking-card">
+              <div class="ab-admin-bike-booking-card__top">
+                <div>
+                  <p class="ab-admin-bike-booking-card__client">Nicolas Martin</p>
+                  <h3 class="ab-admin-bike-booking-card__price">42€</h3>
+                </div>
+                <span class="ab-admin-bike-booking-card__icon">2</span>
+              </div>
+
+              <div class="ab-admin-bike-booking-card__meta">
+                <span>Vélo : VAE Cube Touring</span>
+                <span>Mail : nicolas@email.fr</span>
+              </div>
+
+              <ul class="ab-admin-bike-booking-card__list">
+                <li>Début : 15/07 • 10:00</li>
+                <li>Fin : 15/07 • 19:00</li>
+                <li>Téléphone : 06 11 11 11 11</li>
+              </ul>
+
+              <div class="ab-admin-bike-actions">
+                <button class="ab-admin-bike-button ab-admin-bike-button--primary" type="button">Confirmer</button>
+                <button class="ab-admin-bike-button ab-admin-bike-button--secondary" type="button">Annuler</button>
+              </div>
+            </article>
+
+            <article class="ab-admin-bike-booking-card">
+              <div class="ab-admin-bike-booking-card__top">
+                <div>
+                  <p class="ab-admin-bike-booking-card__client">Julie Bernard</p>
+                  <h3 class="ab-admin-bike-booking-card__price">18€</h3>
+                </div>
+                <span class="ab-admin-bike-booking-card__icon">3</span>
+              </div>
+
+              <div class="ab-admin-bike-booking-card__meta">
+                <span>Vélo : Vélo enfant 20"</span>
+                <span>Mail : julie@email.fr</span>
+              </div>
+
+              <ul class="ab-admin-bike-booking-card__list">
+                <li>Début : 13/07 • 11:00</li>
+                <li>Fin : 14/07 • 16:00</li>
+                <li>Téléphone : 06 33 33 33 33</li>
+              </ul>
+
+              <div class="ab-admin-bike-actions">
+                <button class="ab-admin-bike-button ab-admin-bike-button--primary" type="button">Confirmer</button>
+                <button class="ab-admin-bike-button ab-admin-bike-button--secondary" type="button">Annuler</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="ab-admin-bike-reservations-teaser__cta">
+            <a class="ab-admin-bike-button ab-admin-bike-button--secondary" href="../Admin-location/index.html#admin-rental-bookings-title">
+              Gérer toutes les réservations en détail
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer-root></div>
+  </div>
+
+  <script src="../shared/global.js"></script>
+  <script src="../shared/components.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

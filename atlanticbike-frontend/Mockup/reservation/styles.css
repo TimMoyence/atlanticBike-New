@@ -1,0 +1,7 @@
+.reservation-page {
+  background: var(--ab-color-bg);
+}
+
+.reservation-page .ab-media-hero {
+  padding-bottom: 64px;
+}

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AtlanticBike | Admin réparation</title>
+  <meta name="description"
+    content="Interface statique AtlanticBike pour la prise en charge atelier, le diagnostic et la génération du rapport de réparation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/global.css" />
+  <link rel="stylesheet" href="../shared/components.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="ab-page-shell model-page">
+    <div data-navbar-root></div>
+
+    <main class="ab-page-main">
+      <section class="ab-admin-repair-hero" aria-labelledby="admin-repair-hero-title">
+        <div class="ab-admin-repair-container ab-admin-repair-hero__inner">
+          <p class="ab-admin-repair-hero__eyebrow">Prise en charge atelier</p>
+          <h1 id="admin-repair-hero-title" class="ab-admin-repair-hero__title">
+            Créer une PEC vélo<br />simple, rapide et exploitable
+          </h1>
+          <p class="ab-admin-repair-hero__text">
+            Une interface pensée pour démarrer une prise en charge sans friction, lancer un diagnostic clair et préparer
+            la suite de l’intervention dans un dossier structuré.
+          </p>
+          <div class="ab-admin-repair-hero__actions">
+            <a class="ab-admin-repair-button ab-admin-repair-button--primary" href="#admin-repair-pec-title">
+              Nouvelle PEC
+            </a>
+            <a class="ab-admin-repair-button ab-admin-repair-button--secondary" href="#admin-repair-summary-title">
+              Voir le résumé
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ab-admin-repair-flow" aria-labelledby="admin-repair-flow-title">
+        <div class="ab-admin-repair-container">
+          <div class="ab-admin-repair-flow__header">
+            <p class="ab-admin-repair-section-heading__eyebrow">Parcours</p>
+            <h2 id="admin-repair-flow-title" class="ab-admin-repair-section-heading__title">
+              Une prise en charge en 3 temps
+            </h2>
+          </div>
+
+          <div class="ab-admin-repair-flow__steps">
+            <article class="ab-admin-repair-flow-card">
+              <span class="ab-admin-repair-flow-card__index">01</span>
+              <h3 class="ab-admin-repair-flow-card__title">Identifier le vélo</h3>
+              <p class="ab-admin-repair-flow-card__text">
+                Vélo, client, urgence, motif d’entrée.
+              </p>
+            </article>
+
+            <article class="ab-admin-repair-flow-card">
+              <span class="ab-admin-repair-flow-card__index">02</span>
+              <h3 class="ab-admin-repair-flow-card__title">Documenter le diagnostic</h3>
+              <p class="ab-admin-repair-flow-card__text">
+                État général, observations, devis et pièces.
+              </p>
+            </article>
+
+            <article class="ab-admin-repair-flow-card">
+              <span class="ab-admin-repair-flow-card__index">03</span>
+              <h3 class="ab-admin-repair-flow-card__title">Préparer la suite</h3>
+              <p class="ab-admin-repair-flow-card__text">
+                Rapport, statut atelier et restitution client.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ab-admin-repair-pec" aria-labelledby="admin-repair-pec-title">
+        <div class="ab-admin-repair-container ab-admin-repair-pec__grid">
+          <div class="ab-admin-repair-pec__main">
+            <div class="ab-admin-repair-section-heading ab-admin-repair-section-heading--split ab-admin-repair-section-heading--top">
+              <div>
+                <p class="ab-admin-repair-section-heading__eyebrow">Formulaire dynamique</p>
+                <h2 id="admin-repair-pec-title" class="ab-admin-repair-section-heading__title">
+                  Créer une prise en charge complète
+                </h2>
+              </div>
+              <p class="ab-admin-repair-section-heading__text">
+                Chaque bloc suit le déroulé naturel d’une PEC atelier : identité, constat, diagnostic, chiffrage et
+                éléments visuels.
+              </p>
+            </div>
+
+            <form class="ab-admin-repair-form ab-admin-repair-form--pec" aria-label="Prise en charge vélo">
+              <section class="ab-admin-repair-form-block">
+                <div class="ab-admin-repair-form-block__header">
+                  <h3 class="ab-admin-repair-form-block__title">Informations d’entrée</h3>
+                  <span class="ab-admin-repair-form-block__step">Étape 1</span>
+                </div>
+
+                <div class="ab-admin-repair-form__grid ab-admin-repair-form__grid--two">
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Vélo</span>
+                    <select class="ab-admin-repair-field__select">
+                      <option>VTC Riverside 500</option>
+                      <option>Vélo ville Elops</option>
+                      <option>VAE Cube Touring</option>
+                    </select>
+                  </label>
+
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Client</span>
+                    <input class="ab-admin-repair-field__input" type="text" placeholder="Nom du client" />
+                  </label>
+                </div>
+
+                <div class="ab-admin-repair-form__grid ab-admin-repair-form__grid--three">
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Priorité</span>
+                    <select class="ab-admin-repair-field__select">
+                      <option>Normale</option>
+                      <option>Haute</option>
+                      <option>Urgente</option>
+                    </select>
+                  </label>
+
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Date d’entrée</span>
+                    <input class="ab-admin-repair-field__input" type="text" placeholder="12/03/2026" />
+                  </label>
+
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Statut initial</span>
+                    <select class="ab-admin-repair-field__select">
+                      <option>À diagnostiquer</option>
+                      <option>En attente atelier</option>
+                      <option>À valider</option>
+                    </select>
+                  </label>
+                </div>
+
+                <label class="ab-admin-repair-field ab-admin-repair-field--textarea">
+                  <span class="ab-admin-repair-field__label">Motif de prise en charge</span>
+                  <textarea class="ab-admin-repair-field__textarea"
+                    placeholder="Freins mous, roue voilée, transmission bruyante, batterie faible..."></textarea>
+                </label>
+              </section>
+
+              <section class="ab-admin-repair-form-block">
+                <div class="ab-admin-repair-form-block__header">
+                  <h3 class="ab-admin-repair-form-block__title">Diagnostic atelier</h3>
+                  <span class="ab-admin-repair-form-block__step">Étape 2</span>
+                </div>
+
+                <div class="ab-admin-repair-form__grid ab-admin-repair-form__grid--three">
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Freinage</span>
+                    <select class="ab-admin-repair-field__select">
+                      <option>OK</option>
+                      <option>À régler</option>
+                      <option>À remplacer</option>
+                    </select>
+                  </label>
+
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Transmission</span>
+                    <select class="ab-admin-repair-field__select">
+                      <option>OK</option>
+                      <option>Usure légère</option>
+                      <option>Usure forte</option>
+                    </select>
+                  </label>
+
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Roues / pneus</span>
+                    <select class="ab-admin-repair-field__select">
+                      <option>OK</option>
+                      <option>Contrôle nécessaire</option>
+                      <option>Remplacement conseillé</option>
+                    </select>
+                  </label>
+                </div>
+
+                <label class="ab-admin-repair-field ab-admin-repair-field--textarea">
+                  <span class="ab-admin-repair-field__label">Observations techniques</span>
+                  <textarea class="ab-admin-repair-field__textarea"
+                    placeholder="Décrire l’état constaté, les anomalies relevées et les contrôles à effectuer"></textarea>
+                </label>
+
+                <label class="ab-admin-repair-field ab-admin-repair-field--textarea">
+                  <span class="ab-admin-repair-field__label">Travaux recommandés</span>
+                  <textarea class="ab-admin-repair-field__textarea"
+                    placeholder="Lister ce qui doit être fait : réglage, remplacement, test, nettoyage, contrôle final..."></textarea>
+                </label>
+              </section>
+
+              <section class="ab-admin-repair-form-block">
+                <div class="ab-admin-repair-form-block__header">
+                  <h3 class="ab-admin-repair-form-block__title">Prix, pièces et restitution</h3>
+                  <span class="ab-admin-repair-form-block__step">Étape 3</span>
+                </div>
+
+                <div class="ab-admin-repair-form__grid ab-admin-repair-form__grid--three">
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Main-d’œuvre</span>
+                    <input class="ab-admin-repair-field__input" type="text" placeholder="39€" />
+                  </label>
+
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Pièces</span>
+                    <input class="ab-admin-repair-field__input" type="text" placeholder="24€" />
+                  </label>
+
+                  <label class="ab-admin-repair-field">
+                    <span class="ab-admin-repair-field__label">Total estimé</span>
+                    <input class="ab-admin-repair-field__input" type="text" placeholder="63€" />
+                  </label>
+                </div>
+
+                <label class="ab-admin-repair-field">
+                  <span class="ab-admin-repair-field__label">Pièces principales</span>
+                  <input class="ab-admin-repair-field__input" type="text" placeholder="Chaîne, plaquettes, câble, pneu..." />
+                </label>
+
+                <label class="ab-admin-repair-field ab-admin-repair-field--textarea">
+                  <span class="ab-admin-repair-field__label">Message client / restitution</span>
+                  <textarea class="ab-admin-repair-field__textarea"
+                    placeholder="Expliquez ce qui a été constaté, ce qui sera fait et les recommandations à la restitution"></textarea>
+                </label>
+
+                <label class="ab-admin-repair-field ab-admin-repair-field--textarea">
+                  <span class="ab-admin-repair-field__label">Images / preuves associées</span>
+                  <textarea class="ab-admin-repair-field__textarea"
+                    placeholder="Nom des visuels, emplacement, note d’usage, commentaire atelier..."></textarea>
+                </label>
+
+                <div class="ab-admin-repair-form__actions ab-admin-repair-form__actions--footer">
+                  <button class="ab-admin-repair-button ab-admin-repair-button--primary" type="submit">
+                    Enregistrer la PEC
+                  </button>
+                  <button class="ab-admin-repair-button ab-admin-repair-button--secondary" type="button">
+                    Prévisualiser
+                  </button>
+                </div>
+              </section>
+            </form>
+          </div>
+
+          <aside class="ab-admin-repair-summary" aria-labelledby="admin-repair-summary-title">
+            <article class="ab-admin-repair-panel ab-admin-repair-panel--sticky">
+              <div class="ab-admin-repair-panel__header">
+                <div>
+                  <p class="ab-admin-repair-panel__eyebrow">Résumé live</p>
+                  <h2 id="admin-repair-summary-title" class="ab-admin-repair-panel__title">
+                    Dossier atelier
+                  </h2>
+                </div>
+                <span class="ab-admin-repair-badge">Brouillon</span>
+              </div>
+
+              <div class="ab-admin-repair-summary-list">
+                <div class="ab-admin-repair-summary-item">
+                  <span class="ab-admin-repair-summary-item__label">Vélo</span>
+                  <strong class="ab-admin-repair-summary-item__value">VTC Riverside 500</strong>
+                </div>
+                <div class="ab-admin-repair-summary-item">
+                  <span class="ab-admin-repair-summary-item__label">Client</span>
+                  <strong class="ab-admin-repair-summary-item__value">À renseigner</strong>
+                </div>
+                <div class="ab-admin-repair-summary-item">
+                  <span class="ab-admin-repair-summary-item__label">Statut</span>
+                  <strong class="ab-admin-repair-summary-item__value">À diagnostiquer</strong>
+                </div>
+                <div class="ab-admin-repair-summary-item">
+                  <span class="ab-admin-repair-summary-item__label">Total estimé</span>
+                  <strong class="ab-admin-repair-summary-item__value">—</strong>
+                </div>
+              </div>
+
+              <div class="ab-admin-repair-summary-divider"></div>
+
+              <ul class="ab-admin-repair-inline-list">
+                <li>Dossier client identifiable</li>
+                <li>Diagnostic structuré</li>
+                <li>Prix et pièces centralisés</li>
+                <li>Message client prêt à partir</li>
+              </ul>
+
+              <div class="ab-admin-repair-step__actions">
+                <a class="ab-admin-repair-button ab-admin-repair-button--secondary" href="#admin-repair-report-title">
+                  Générer le rapport
+                </a>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="ab-admin-repair-report" aria-labelledby="admin-repair-report-title">
+        <div class="ab-admin-repair-container">
+          <article class="ab-admin-repair-panel ab-admin-repair-panel--report">
+            <div class="ab-admin-repair-panel__header">
+              <div>
+                <p class="ab-admin-repair-panel__eyebrow">Sortie</p>
+                <h2 id="admin-repair-report-title" class="ab-admin-repair-panel__title">
+                  Génération du rapport de prise en charge
+                </h2>
+              </div>
+            </div>
+            <p class="ab-admin-repair-panel__text">
+              À la fin du flux, vous devez pouvoir sortir un document clair avec l’historique de la PEC, le diagnostic,
+              les travaux, les pièces, les prix et la restitution.
+            </p>
+            <div class="ab-admin-repair-step__actions">
+              <button class="ab-admin-repair-button ab-admin-repair-button--secondary" type="button">Générer</button>
+              <button class="ab-admin-repair-link" type="button">Imprimer</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer-root></div>
+  </div>
+
+  <script src="../shared/global.js"></script>
+  <script src="../shared/components.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

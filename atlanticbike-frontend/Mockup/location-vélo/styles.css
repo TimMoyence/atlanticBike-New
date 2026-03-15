@@ -1,0 +1,603 @@
+.model-page {
+  background: var(--ab-color-page-bg);
+}
+
+.ab-rental-container {
+  width: min(
+    calc(100% - (var(--ab-layout-inline) * 2)),
+    var(--ab-layout-max-width)
+  );
+  margin: 0 auto;
+}
+
+.ab-rental-page {
+  padding-bottom: 96px;
+}
+
+.ab-rental-hero,
+.ab-rental-categories,
+.ab-rental-electric,
+.ab-rental-family,
+.ab-rental-pricing,
+.ab-rental-how,
+.ab-rental-cta,
+.ab-rental-contact {
+  padding: 0 0 96px;
+}
+
+.ab-rental-hero {
+  padding-top: 88px;
+}
+
+.ab-rental-categories,
+.ab-rental-pricing,
+.ab-rental-how,
+.ab-rental-contact {
+  background: #ffffff;
+  padding-top: 72px;
+}
+
+.ab-rental-family {
+  background: var(--ab-color-page-bg);
+  padding-top: 72px;
+}
+
+.ab-rental-hero__inner,
+.ab-rental-cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ab-rental-eyebrow {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.ab-rental-hero__title,
+.ab-rental-section-title,
+.ab-rental-category-card h3,
+.ab-rental-rental-card h3,
+.ab-rental-how-card h3,
+.ab-rental-site-card h3 {
+  margin: 0;
+  letter-spacing: -0.05em;
+  color: #111111;
+}
+
+.ab-rental-hero__title {
+  max-width: 860px;
+  font-size: clamp(48px, 5.4vw, 76px);
+  line-height: 1.02;
+}
+
+.ab-rental-hero__text,
+.ab-rental-section-text,
+.ab-rental-category-card p,
+.ab-rental-list li,
+.ab-rental-family-card p,
+.ab-rental-site-card p,
+.ab-rental-contact-item span,
+.ab-rental-how-card p {
+  color: rgba(17, 17, 17, 0.76);
+}
+
+.ab-rental-hero__text,
+.ab-rental-section-text {
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.ab-rental-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ab-rental-actions--center {
+  justify-content: center;
+}
+
+.ab-rental-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.ab-rental-tags__item {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.06);
+  font-size: 15px;
+  color: #111111;
+}
+
+.ab-rental-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #111111;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ab-rental-button:hover,
+.ab-rental-link:hover {
+  transform: translateY(-1px);
+}
+
+.ab-rental-button--primary {
+  background: var(--ab-color-accent);
+}
+
+.ab-rental-button--primary:hover {
+  background: var(--ab-color-accent);
+}
+
+.ab-rental-button--secondary {
+  background: #e7e7e4;
+}
+
+.ab-rental-button--secondary:hover {
+  border-color: rgba(17, 17, 17, 0.12);
+}
+
+.ab-rental-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ab-rental-link::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.ab-rental-section-heading--centered {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.ab-rental-section-title {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.08;
+}
+
+.ab-rental-category-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.75fr 0.75fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.ab-rental-category-card {
+  display: grid;
+  grid-template-rows: auto 140px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 20px;
+  background: var(--ab-color-panel);
+  overflow: hidden;
+}
+
+.ab-rental-category-card--wide {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.ab-rental-category-card__content {
+  padding: 22px;
+}
+
+.ab-rental-category-card__eyebrow {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: rgba(17, 17, 17, 0.68);
+}
+
+.ab-rental-category-card h3 {
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.ab-rental-category-card p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ab-rental-category-card__media,
+.ab-rental-visual-card,
+.ab-rental-family-card__media,
+.ab-rental-how-card__media,
+.ab-rental-contact-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dcdcd8;
+  color: rgba(120, 120, 120, 0.52);
+}
+
+.ab-rental-category-card__media--small {
+  min-height: 140px;
+}
+
+.ab-rental-category-card__icon {
+  font-size: 42px;
+}
+
+.ab-rental-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 520px;
+  gap: 40px;
+  align-items: center;
+}
+
+.ab-rental-list {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.ab-rental-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ab-rental-list li::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.ab-rental-visual-card {
+  min-height: 420px;
+  border-radius: 18px;
+}
+
+.ab-rental-visual-card__icon {
+  display: inline-flex;
+  width: 110px;
+  height: 110px;
+}
+
+.ab-rental-visual-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ab-rental-family-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.34);
+  overflow: hidden;
+}
+
+.ab-rental-family-card__media {
+  min-height: 380px;
+}
+
+.ab-rental-family-card__icon {
+  font-size: 56px;
+}
+
+.ab-rental-family-card__content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ab-rental-family-card__content h3 {
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.ab-rental-family-card p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ab-rental-pricing-table-wrap {
+  overflow-x: auto;
+}
+
+.ab-rental-pricing-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.ab-rental-pricing-table th,
+.ab-rental-pricing-table td {
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.ab-rental-pricing-table th:first-child,
+.ab-rental-pricing-table td:first-child {
+  text-align: left;
+}
+
+.ab-rental-pricing-head {
+  display: grid;
+  gap: 8px;
+  text-align: center;
+}
+
+.ab-rental-pricing-head span {
+  font-size: 16px;
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.ab-rental-pricing-head strong {
+  font-size: clamp(34px, 3vw, 46px);
+  line-height: 1;
+  color: #111111;
+}
+
+.ab-rental-pricing-head small {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(17, 17, 17, 0.68);
+}
+
+.ab-rental-pricing-divider-row td {
+  padding-top: 26px;
+  font-weight: 600;
+  color: #111111;
+  background: transparent;
+}
+
+.ab-rental-pricing-table
+  tbody
+  tr:not(.ab-rental-pricing-divider-row):not(
+    .ab-rental-pricing-cta-row
+  ):nth-child(even) {
+  background: rgba(17, 17, 17, 0.04);
+}
+
+.ab-rental-pricing-cta-row td {
+  padding-top: 22px;
+}
+
+.ab-rental-how-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 0.9fr 1.2fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.ab-rental-how-card {
+  display: grid;
+  grid-template-rows: 160px 1fr;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 20px;
+  background: var(--ab-color-panel);
+  overflow: hidden;
+}
+
+.ab-rental-how-card--wide {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.ab-rental-how-card__media {
+  min-height: 160px;
+  font-size: 42px;
+}
+
+.ab-rental-how-card__media--large {
+  min-height: 100%;
+}
+
+.ab-rental-how-card__content {
+  padding: 22px;
+}
+
+.ab-rental-how-card h3 {
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.ab-rental-how-card p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ab-rental-contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 520px;
+  gap: 32px;
+  align-items: start;
+}
+
+.ab-rental-site-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.ab-rental-site-card {
+  padding-left: 18px;
+  border-left: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.ab-rental-site-card h3 {
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.ab-rental-site-card p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ab-rental-contact-side {
+  display: grid;
+  gap: 18px;
+}
+
+.ab-rental-contact-details {
+  display: grid;
+  gap: 14px;
+}
+
+.ab-rental-contact-item {
+  display: grid;
+  gap: 6px;
+}
+
+.ab-rental-contact-item strong {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #111111;
+}
+
+.ab-rental-contact-map {
+  min-height: 300px;
+  border-radius: 18px;
+}
+
+.ab-rental-contact-map__icon {
+  font-size: 72px;
+  line-height: 1;
+}
+
+@media (max-width: 1180px) {
+  .ab-rental-category-grid,
+  .ab-rental-two-col,
+  .ab-rental-family-card,
+  .ab-rental-how-grid,
+  .ab-rental-contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-rental-category-card--wide,
+  .ab-rental-how-card--wide {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-rental-container {
+    width: min(calc(100% - 36px), 1320px);
+  }
+
+  .ab-rental-page,
+  .ab-rental-hero,
+  .ab-rental-categories,
+  .ab-rental-electric,
+  .ab-rental-family,
+  .ab-rental-pricing,
+  .ab-rental-how,
+  .ab-rental-cta,
+  .ab-rental-contact {
+    padding-bottom: 84px;
+  }
+
+  .ab-rental-hero,
+  .ab-rental-categories,
+  .ab-rental-pricing,
+  .ab-rental-how,
+  .ab-rental-contact {
+    padding-top: 56px;
+  }
+
+  .ab-rental-hero {
+    padding-top: 70px;
+  }
+
+  .ab-rental-hero__title,
+  .ab-rental-section-title,
+  .ab-rental-category-card h3,
+  .ab-rental-family-card__content h3,
+  .ab-rental-how-card h3,
+  .ab-rental-site-card h3 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .ab-rental-eyebrow,
+  .ab-rental-hero__text,
+  .ab-rental-section-text,
+  .ab-rental-category-card p,
+  .ab-rental-list li,
+  .ab-rental-family-card p,
+  .ab-rental-site-card p,
+  .ab-rental-contact-item span,
+  .ab-rental-how-card p,
+  .ab-rental-button,
+  .ab-rental-link {
+    font-size: 16px;
+  }
+
+  .ab-rental-visual-card {
+    min-height: 260px;
+  }
+
+  .ab-rental-visual-card__icon {
+    width: 88px;
+    height: 88px;
+  }
+
+  .ab-rental-family-card__media,
+  .ab-rental-contact-map {
+    min-height: 220px;
+  }
+
+  .ab-rental-family-card__content,
+  .ab-rental-how-card__content,
+  .ab-rental-category-card__content {
+    padding: 18px;
+  }
+}

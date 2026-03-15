@@ -1,0 +1,18 @@
+.detail-vtt-vtc-page {
+  background: var(--ab-color-page-bg);
+}
+
+.detail-vtt-vtc-page .ab-page-main {
+  padding-bottom: 32px;
+}
+
+.detail-vtt-vtc-page .ab-testimonials-section.is-soft .ab-testimonial-card {
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.025);
+}
+
+.detail-vtt-vtc-page .ab-faq-split .ab-faq-item,
+.detail-vtt-vtc-page .ab-detail-process-card-lead,
+.detail-vtt-vtc-page .ab-detail-process-card-step {
+  border: 1px solid rgba(21, 21, 21, 0.06);
+}
